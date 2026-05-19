@@ -1,0 +1,103 @@
+.hero-layout {
+  z-index: 2;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  display: flex;
+  pointer-events: none;
+}
+.hero-layout-first-column {
+  display: flex;
+  flex-direction: column;
+  width: 5%;
+  height: 100%;
+  border-right: 1px solid #dcdfe40a;
+}
+
+.hero-layout-first-column div,
+.hero-layout-main-column div,
+.hero-layout-last-column div {
+  border-bottom: 1px solid #dcdfe40a;
+  height: 19%;
+  width: 100%;
+  position: relative;
+}
+
+.first {
+  height: 11% !important;
+  width: 100%;
+}
+.hero-layout-main-column {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid #dcdfe40a;
+}
+.hero-layout-last-column {
+  display: flex;
+  flex-direction: column;
+  width: 5%;
+  height: 100%;
+}
+
+.star-1 {
+  position: absolute;
+  right: -11px;
+  bottom: -12px;
+  width: 22px;
+  height: 24px;
+}
+.star-2 {
+  position: absolute;
+  right: -15px;
+  top: -16px;
+  width: 28px;
+  height: 32px;
+}
+.star-3 {
+  position: absolute;
+  left: -15px;
+  top: -16px;
+  width: 28px;
+  height: 32px;
+}
+.star-4 {
+  position: absolute;
+  left: -9px;
+  top: -10px;
+  width: 18px;
+  height: 20px;
+}
+
+.hero-main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-main-content h1 {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 68px;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+}
+
+.hero-main-content-span-1 {
+  display: inline-block;
+  background-image: url("/Hero/span-1.png");
+  width: 100px;
+  height: 52px;
+}
+
+.hero-main-content-span-2 {
+  display: inline-block;
+  background-image: url("/Hero/span-2.png");
+  width: 100px;
+  height: 52px;
+}

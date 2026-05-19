@@ -1,7 +1,9 @@
 import Image from "next/image";
 import "./style.css";
+import "./layout.css";
 
 export function Hero() {
+  
   return (
     <section className="hero">
       <div className="hero-layout">
@@ -87,7 +89,17 @@ export function Hero() {
         </div>
       </div>
       <div className="container">
-        <div className="hero-top"></div>
+        <div className="hero-top">
+          <div className="hero-absolute-text-card hero-top-1">Дизайн</div>
+          <div className="hero-absolute-text-card hero-top-2">Розробка</div>
+          <Image
+            src={"/Hero/shape.png"}
+            width={180}
+            height={180}
+            alt=""
+            className="hero-top-img"
+          />
+        </div>
         <div className="hero-main-content">
           <h1>
             Створюємо <span className="hero-main-content-span-1"></span> <br />
@@ -106,7 +118,19 @@ export function Hero() {
             </button>
           </div>
         </div>
-        <div className="hero-bottom"></div>
+        <div className="hero-bottom">
+          <div className="hero-absolute-text-card hero-bottom-1">Зростання</div>
+          <div className="hero-absolute-text-card hero-bottom-2">
+            Масштабування
+          </div>
+          <Image
+            src={"/Hero/shape-2.png"}
+            width={180}
+            height={180}
+            alt=""
+            className="hero-bottom-img"
+          />
+        </div>
       </div>
     </section>
   );

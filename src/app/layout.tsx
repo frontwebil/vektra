@@ -16,7 +16,18 @@ const nyghtSerif = localFont({
       weight: "400",
       style: "italic",
     },
+    {
+      path: "./fonts/NyghtSerif-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/NyghtSerif-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
   ],
+  variable: "--font-nyght-serif",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.className} ${ubuntu.className} ${nyghtSerif.className} h-full antialiased`}
+      className={`${montserrat.className} ${ubuntu.className} ${nyghtSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
