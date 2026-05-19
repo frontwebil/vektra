@@ -1,0 +1,114 @@
+header {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.header-logo img {
+  width: 115px;
+  height: 40px;
+}
+
+.header-logo-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  text-align: right;
+  color: #ffffff66;
+  margin-bottom: -3px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+}
+
+.header-nav {
+  color: rgba(255, 255, 255, 0.12);
+}
+
+.header-nav-link {
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.header-nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.header-nav-languague-switcher {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.header-nav-languague-switcher-button:first-child {
+  color: #fff;
+}
+.header-nav-languague-switcher-button {
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.header-nav-languague-switcher-button:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.header-button {
+  display: flex;
+  align-items: center;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+
+  height: 44px;
+  cursor: pointer;
+}
+.header-button-text {
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  padding: 0 20px;
+  margin-right: -10px;
+  transition: all 0.3s ease-in-out;
+}
+.header-button-icon {
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  aspect-ratio: 1 / 1;
+  font-size: 22px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-button:hover .header-button-text,
+.header-button:hover .header-button-icon {
+  background-color: rgba(25, 61, 235, 1);
+  color: rgba(220, 223, 228, 1);
+}

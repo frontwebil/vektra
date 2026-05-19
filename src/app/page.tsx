@@ -1,3 +1,11 @@
+import { Hero } from "@/components/Hero/Hero";
+import { Header } from "@/components/Layouts/Header/Header";
+
 export default function Home() {
-  return 1;
+  return (
+    <>
+      <Header />
+      <Hero />
+    </>
+  );
 }
