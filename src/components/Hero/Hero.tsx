@@ -1,12 +1,39 @@
+"use client";
+
 import Image from "next/image";
+import { useCallback, useRef } from "react";
 import "./style.css";
 import "./layout.css";
 
 export function Hero() {
-  
+  const heroRef = useRef<HTMLElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
+    const hero = heroRef.current;
+    const glow = glowRef.current;
+    if (!hero || !glow) return;
+
+    const rect = hero.getBoundingClientRect();
+    glow.style.left = `${e.clientX - rect.left}px`;
+    glow.style.top = `${e.clientY - rect.top}px`;
+    glow.style.opacity = "1";
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    const glow = glowRef.current;
+    if (!glow) return;
+    glow.style.opacity = "0";
+  }, []);
+
   return (
-    <section className="hero">
-      <div className="hero-layout">
+    <section
+      ref={heroRef}
+      className="hero"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div ref={glowRef} className="hero-cursor-glow" aria-hidden />      <div className="hero-layout">
         <div className="hero-layout-first-column">
           <div className="first"></div>
           <div></div>
