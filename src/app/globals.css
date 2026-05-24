@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+* {
+  cursor: none;
+}
+
+*:hover {
+  cursor: none;
+}
+
 body {
   font-family: Montserrat;
 }
@@ -9,4 +17,24 @@ body {
   margin: 0 auto;
   width: 100%;
   padding: 0 20px;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  pointer-events: none;
+  z-index: 999999;
+
+  transform: translate(-50%, -50%);
+
+  /* transition: transform 0.08s linear, */
+}
+
+.custom-cursor img {
+  width: 20px;
+  height: auto;
+
+  user-select: none;
 }

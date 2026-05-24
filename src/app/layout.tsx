@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Montserrat, Ubuntu } from "next/font/google";
 import "./globals.css";
 import "./reset.css";
+import CustomCursor from "@/components/CustomCursor/CustomCursor";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 const ubuntu = Ubuntu({
@@ -46,7 +47,10 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.className} ${ubuntu.className} ${nyghtSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   );
 }

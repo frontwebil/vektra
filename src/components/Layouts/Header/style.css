@@ -4,6 +4,12 @@ header {
   width: 100%;
   top: 0;
   padding: 20px 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+header.header--on-about {
+  background-color: rgba(13, 14, 32, 1);
 }
 
 header .container {
@@ -67,7 +73,6 @@ header .container {
 .header-nav-languague-switcher-button {
   color: rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 .header-nav-languague-switcher-button:hover {
   color: rgba(255, 255, 255, 1);
@@ -80,9 +85,9 @@ header .container {
   font-size: 16px;
   line-height: 100%;
   letter-spacing: -5%;
-
+  position: relative;
+  z-index: 1;
   height: 44px;
-  cursor: pointer;
 }
 .header-button-text {
   background-color: #fff;
@@ -107,8 +112,20 @@ header .container {
   transition: all 0.3s ease-in-out;
 }
 
+.header-button-icon {
+  opacity: 0;
+  transform: translateX(-10px);
+  z-index: 0;
+  transition: 0.3s;
+}
+
+.header-button:hover .header-button-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .header-button:hover .header-button-text,
 .header-button:hover .header-button-icon {
-  background-color: #193DEB;
+  background-color: #193deb;
   color: rgba(220, 223, 228, 1);
 }

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function AboutUs() {
   return (
-    <section className="about-us">
+    <section id="about-us" className="about-us">
       <div className="container">
         <div className="about-us-top">
           <div className="about-us-left-text">
@@ -23,7 +23,7 @@ export function AboutUs() {
                 дають конкурентну перевагу
               </span>
             </h2>
-            <Link href={"/"} className="about-us-title-see-more">
+            <Link href={"/"} className="about-us-title-see-more" data-cursor="hover">
               <p>Переглянути послуги</p>
               <GoArrowUpRight />
             </Link>

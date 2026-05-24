@@ -122,10 +122,7 @@ export function Hero() {
           </h1>
           <h2>Дизайн, розробка та SEO як єдина система росту бізнесу</h2>
           <div className="hero-main-content-buttons">
-            <button className="hero-main-content-button-learn-more">
-              Дізнатись більше
-            </button>
-            <button className="hero-main-content-button-learn-services">
+            <button className="hero-main-content-button-learn-services" data-cursor="hover">
               Ознайомитись із послугами
             </button>
           </div>

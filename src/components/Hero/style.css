@@ -64,37 +64,17 @@
   align-items: center;
 }
 
-.hero-main-content-button-learn-more {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: -5%;
-  color: rgba(13, 14, 32, 1);
-  background-color: rgba(220, 223, 228, 1);
-
-  height: 44px;
-  padding: 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-}
 .hero-main-content-button-learn-services {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 100%;
   letter-spacing: -5%;
-  color: rgba(220, 223, 228, 1);
-  background-color: rgba(25, 61, 235, 1);
-
-  height: 44px;
-  padding: 20px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
+  background-color: rgba(220, 223, 228, 1);
+  padding: 14px 30px;
 }
 
 .hero-top {
