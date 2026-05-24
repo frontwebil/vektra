@@ -22,9 +22,7 @@
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(200px);
-  -webkit-backdrop-filter: blur(200px);
-  background: rgba(217, 217, 217, 0.01);
+  background: rgba(13, 14, 32, 0.75);
 }
 
 .hero .container {

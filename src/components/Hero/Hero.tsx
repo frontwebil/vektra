@@ -14,7 +14,7 @@ export function Hero() {
           playsInline
           preload="auto"
         >
-          <source src="/Hero/bg.mp4" type="video/mp4" />
+          <source src="/Hero/bg.webm" type="video/webm" />
         </video>
         <div className="hero-bg-overlay" />
       </div>
