@@ -5,6 +5,19 @@ import "./layout.css";
 export function Hero() {
   return (
     <section className="hero">
+      <div className="hero-bg" aria-hidden>
+        <video
+          className="hero-bg-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        >
+          <source src="/Hero/bg.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-bg-overlay" />
+      </div>
       <div className="hero-layout">
         <div className="hero-layout-first-column">
           <div className="first"></div>
