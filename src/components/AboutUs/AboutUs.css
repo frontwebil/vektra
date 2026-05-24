@@ -3,7 +3,10 @@
   border-radius: 60px 60px 0 0;
   margin-top: -60px;
   padding-top: 100px;
-  padding-bottom: 120px;
+  padding-bottom: 185px;
+  position: sticky;
+  top: -60px;
+  z-index: 3;
 }
 .about-us-top {
   display: flex;

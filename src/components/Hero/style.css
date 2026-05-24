@@ -1,4 +1,6 @@
 .hero {
+  position: sticky;
+  top: 0px;
   background-image: url("/Hero/hero-bg.png");
   width: 100%;
   background-position: center;

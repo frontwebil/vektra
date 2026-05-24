@@ -109,6 +109,6 @@ header .container {
 
 .header-button:hover .header-button-text,
 .header-button:hover .header-button-icon {
-  background-color: rgba(25, 61, 235, 1);
+  background-color: #193DEB;
   color: rgba(220, 223, 228, 1);
 }

@@ -42,7 +42,7 @@ export function Header() {
         </nav>
         <div className="header-button">
           <div className="header-button-text">Зв’язатись з нами</div>
-          <div className="header-button-icon">
+          <div className="header-button-icon" >
             <GoArrowUpRight />
           </div>
         </div>

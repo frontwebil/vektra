@@ -1,0 +1,11 @@
+.services {
+  position: static;
+  width: 100%;
+  z-index: 3;
+  height: 100vh;
+  background-color: #0d0e20;
+
+  border-radius: 60px;
+
+  margin-top: -60px;
+}
