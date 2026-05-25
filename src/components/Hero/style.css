@@ -11,6 +11,8 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
+
+  background-color: #0a0b19;
 }
 
 .hero-bg-video {
@@ -75,6 +77,12 @@
   border-radius: 100px;
   background-color: rgba(220, 223, 228, 1);
   padding: 14px 30px;
+  transition: all 0.3s ease;
+}
+
+.hero-main-content-button-learn-services:hover {
+  background-color: #193DEB;
+  color: #fff;
 }
 
 .hero-top {

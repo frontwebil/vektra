@@ -105,7 +105,7 @@ export function Hero() {
           <div className="hero-absolute-text-card hero-top-1">Дизайн</div>
           <div className="hero-absolute-text-card hero-top-2">Розробка</div>
           <Image
-            src={"/Hero/shape.png"}
+            src={"/Hero/shape.webp"}
             width={180}
             height={180}
             alt=""
@@ -133,7 +133,7 @@ export function Hero() {
             Масштабування
           </div>
           <Image
-            src={"/Hero/shape-2.png"}
+            src={"/Hero/shape-2.webp"}
             width={180}
             height={180}
             alt=""

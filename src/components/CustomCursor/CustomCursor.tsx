@@ -42,7 +42,7 @@ export default function CustomCursor() {
       }}
     >
       <Image
-        src={hovered ? "/cursor-hover.png" : "/cursor.png"}
+        src={hovered ? "/cursor-hover.webp" : "/cursor.webp"}
         alt="cursor"
         width={100}
         height={100}

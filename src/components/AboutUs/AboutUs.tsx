@@ -45,7 +45,7 @@ export function AboutUs() {
                 Ніша
               </div>
               <Image
-                src={"/shape/shape-1.png"}
+                src={"/shape/shape-1.webp"}
                 width={300}
                 height={300}
                 alt="shape"
@@ -73,7 +73,7 @@ export function AboutUs() {
                 Зростання
               </div>
               <Image
-                src={"/shape/shape-2.png"}
+                src={"/shape/shape-2.webp"}
                 width={300}
                 height={300}
                 alt="shape"
@@ -94,7 +94,7 @@ export function AboutUs() {
                 Комунікація
               </div>
               <Image
-                src={"/shape/shape-3.png"}
+                src={"/shape/shape-3.webp"}
                 width={300}
                 height={300}
                 alt="shape"
