@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 
 export function Header() {
   const [isOnAbout, setIsOnAbout] = useState(false);
-  const [isButtonHovered, setIsButtonHovered] = useState(false);
 
   useEffect(() => {
     const aboutSection = document.getElementById("about-us");
@@ -76,8 +75,6 @@ export function Header() {
         <div
           className="header-button"
           data-cursor="hover"
-          onMouseEnter={() => setIsButtonHovered(true)}
-          onMouseLeave={() => setIsButtonHovered(false)}
         >
           <div className="header-button-text">Зв’язатись з нами</div>
           <div className="header-button-icon">

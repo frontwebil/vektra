@@ -29,7 +29,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 36px 0;
+  padding: 45px 0;
   border-bottom: 1px solid rgba(220, 223, 228, 0.1);
 }
 
@@ -103,4 +103,49 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(-50%);
+}
+
+.service-naming-container {
+  position: relative;
+}
+.service-naming-tag {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 14px;
+  letter-spacing: -5%;
+
+  color: #fff;
+  background-color: rgba(25, 61, 235, 1);
+  width: max-content;
+
+  border-radius: 100px;
+  padding: 8px 12px;
+}
+.first-naming-tag {
+  left: 7%;
+  transform: rotate(-5deg);
+}
+.second-naming-tag {
+  left: 29%;
+  bottom: -25px;
+  transform: rotate(5deg);
+}
+.third-naming-tag {
+  top: -20px;
+  right: 90%;
+  transform: rotate(5deg);
+
+  background: rgba(220, 223, 228, 1);
+  color: rgba(25, 61, 235, 1);
+}
+.fourth-naming-tag {
+  right: 0%;
+  top: -18px;
+  transform: rotate(-5deg);
 }

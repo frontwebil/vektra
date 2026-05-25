@@ -48,7 +48,7 @@ const services = [
     letter: "F",
     title: "Автоматизація процесів",
     text: "Впровадження цифрових рішень для автоматизації процесів, комунікації та роботи з клієнтськими даними",
-    tags: ["CRM Системи", "API інтеграції", "Оптимізація процесів"],
+    tags: ["CRM Системи", "API інтеграції", "Оптимізація процесів", "n8n"],
     link: "/",
   },
 ];
@@ -72,7 +72,19 @@ export function Services() {
                 className={`service-row-left ${activeService == i && "hovered"}`}
               >
                 <div className="service-letter">[ {service.letter} ]</div>
-                <div className="">
+                <div className="service-naming-container">
+                  <div className="service-naming-tag first-naming-tag">
+                    {service.tags[0]}
+                  </div>
+                  <div className="service-naming-tag second-naming-tag">
+                    {service.tags[1]}
+                  </div>
+                  <div className="service-naming-tag fourth-naming-tag">
+                    <div className="service-naming-tag third-naming-tag">
+                      {service.tags[2]}
+                    </div>
+                    {service.tags[3]}
+                  </div>
                   <h2 className="service-naming">{service.title}</h2>
                 </div>
               </div>
