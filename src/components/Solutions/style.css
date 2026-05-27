@@ -1,0 +1,270 @@
+.solutions {
+  background-color: #ffffff;
+  position: static;
+  z-index: 3;
+  padding: 180px 0 120px;
+}
+
+.solutions .container {
+  position: relative;
+}
+
+.solutions-title {
+  font-family: var(--font-nyght-serif), serif;
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 68px;
+  letter-spacing: -2%;
+
+  max-width: 880px;
+}
+.solutions-button {
+  margin-left: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  position: relative;
+  z-index: 1;
+  height: 44px;
+
+  max-width: 250px;
+  width: 100%;
+
+  vertical-align: middle;
+}
+.solutions-button-text {
+  background-color: #193deb;
+  color: rgba(220, 223, 228, 1);
+
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  padding: 0 20px;
+  margin-right: -10px;
+  transition: all 0.3s ease-in-out;
+}
+.solutions-button-icon {
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  aspect-ratio: 1 / 1;
+  font-size: 22px;
+  transition: all 0.3s ease-in-out;
+}
+
+.solutions-button-icon {
+  opacity: 0;
+  transform: translateX(0px);
+  z-index: 0;
+  width: 0;
+  transition: 0.3s;
+}
+
+.solutions-button:hover .solutions-button-icon {
+  width: 44px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.solutions-button:hover .solutions-button-text,
+.solutions-button:hover .solutions-button-icon {
+  background-color: #ffffff;
+  color: #193deb;
+  border: 1px solid #193deb;
+}
+
+.solutions-desctiprion {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -5%;
+  color: #02002880;
+
+  max-width: 315px;
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+.solutions-shape {
+  position: absolute;
+  top: 52px;
+  right: 112px;
+  width: 315px;
+  aspect-ratio: 1 / 1;
+}
+
+.solutions-cards {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+  margin-top: 60px;
+}
+.solution-card {
+  max-width: 350px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 20px;
+  background-image: url("/Solutions/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 12px;
+  position: relative;
+}
+.solution-imgs {
+  display: flex;
+}
+
+.solution-img {
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.solution-card:hover .solution-img {
+  filter: grayscale(0%);
+}
+
+.solution-card:hover .solution-img:first-child {
+  top: 5%;
+  transform: rotate(-4deg);
+}
+
+.solution-card:hover .solution-img:nth-child(2) {
+  left: 50%;
+  top: 21%;
+}
+
+.solution-card:hover .solution-img:nth-child(3) {
+  top: 14%;
+  transform: rotate(9deg);
+}
+
+.solution-img:first-child {
+  max-width: 133px;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  left: 9%;
+  top: 9%;
+  transform: rotate(-5deg);
+}
+
+.solution-img:nth-child(2) {
+  max-width: 135px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 23%;
+  transform: translateX(-50%);
+}
+
+.solution-img:nth-child(3) {
+  max-width: 133px;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  right: 11%;
+  top: 17%;
+  transform: rotate(10deg);
+}
+
+.solution-description {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  aspect-ratio: 290 / 183;
+
+  padding: 16px;
+
+  color: #fff;
+
+  border-radius: 22px;
+
+  background-image: url("/Solutions/Folder.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.solution-description h3 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -5%;
+
+  /* background-color: #193deb; */
+  color: #0d0e20;
+  background: #ffffff;
+
+  padding: 8px 12px;
+  width: max-content;
+
+  border-radius: 100px;
+
+  transition: all 0.3s ease;
+}
+
+.solution-card:hover .solution-description h3 {
+  background-color: #193deb;
+  color: #fff;
+}
+
+.solution-description h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: -2%;
+}
+.solution-description p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -5%;
+  color: #ffffff80;
+  margin-top: 10px;
+}
+
+.solution-card-arrow {
+  opacity: 0;
+  background: #193deb;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 100px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.solution-card-arrow svg {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.solution-card:hover .solution-card-arrow {
+  opacity: 1;
+}
