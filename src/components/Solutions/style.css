@@ -36,6 +36,7 @@
   width: 100%;
 
   vertical-align: middle;
+  border: 1px solid transparent;
 }
 .solutions-button-text {
   background-color: #193deb;
@@ -60,6 +61,7 @@
   aspect-ratio: 1 / 1;
   font-size: 22px;
   transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
 }
 
 .solutions-button-icon {
