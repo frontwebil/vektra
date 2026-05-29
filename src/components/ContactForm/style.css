@@ -1,0 +1,79 @@
+.ContactForm {
+  background: rgba(13, 14, 32, 0.3);
+  position: fixed;
+  inset: 0;
+
+  z-index: 12;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.ContactForm.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.ContactForm-container {
+  padding: 20px;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+}
+
+.ContactForm-wrapper {
+  position: relative;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(220, 223, 228, 1);
+  box-shadow: 0px 48px 100px 0px rgba(13, 14, 32, 0.15);
+
+  width: 100%;
+  height: 700px;
+  max-width: 650px;
+  margin: 0 auto;
+  border-radius: 40px;
+
+  padding: 36px;
+}
+
+.ContactForm-close {
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  top: 36px;
+  right: 36px;
+}
+
+.ContactForm-close svg {
+  width: 28px;
+  height: 28px;
+}
+
+.ContactForm-title {
+  font-family: var(--font-nyght-serif), serif;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 52px;
+  line-height: 48px;
+  letter-spacing: -2%;
+}
+.ContactForm-description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -5%;
+  color: rgba(2, 0, 40, 0.5);
+
+  margin-top: 24px;
+  margin-right: 36px;
+}

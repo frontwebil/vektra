@@ -2,8 +2,11 @@ import Image from "next/image";
 import "./style.css";
 import "./layout.css";
 import { GoArrowUpRight } from "react-icons/go";
+import { useIsOpenForm } from "@/Zustand/isOpenForm";
 
 export function Hero() {
+  const { openContactForm } = useIsOpenForm();
+
   return (
     <section className="hero">
       <div className="hero-bg" aria-hidden>
@@ -122,7 +125,10 @@ export function Hero() {
             <span className="hero-main-content-italic">задають напрямок</span>
           </h1>
           <h2>Дизайн, розробка та SEO як єдина система росту бізнесу</h2>
-          <div className="hero-main-content-button">
+          <div
+            className="hero-main-content-button"
+            onClick={() => openContactForm()}
+          >
             <button
               className="hero-main-content-button-learn-services"
               data-cursor="hover"

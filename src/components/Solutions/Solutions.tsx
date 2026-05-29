@@ -1,15 +1,22 @@
 import { GoArrowUpRight } from "react-icons/go";
 import "./style.css";
 import Image from "next/image";
+import { useIsOpenForm } from "@/Zustand/isOpenForm";
 
 export function Solutions() {
+  const { openContactForm } = useIsOpenForm();
+
   return (
     <section className="solutions">
       <div className="container">
         <h3 className="solutions-title">
           <span style={{ color: "#193DEB" }}>Рішення</span>
           , що рухають <br /> бізнес вперед{" "}
-          <span className="solutions-button" data-cursor="hover">
+          <span
+            className="solutions-button"
+            data-cursor="hover"
+            onClick={() => openContactForm()}
+          >
             <div className="solutions-button-text">Хочу такий результат</div>
             <div className="solutions-button-icon">
               <GoArrowUpRight />

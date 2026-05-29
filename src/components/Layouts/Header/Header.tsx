@@ -5,9 +5,11 @@ import "./style.css";
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 import { useEffect, useState } from "react";
+import { useIsOpenForm } from "@/Zustand/isOpenForm";
 
 export function Header() {
   const [isOnAbout, setIsOnAbout] = useState(false);
+  const { openContactForm } = useIsOpenForm();
 
   useEffect(() => {
     const aboutSection = document.getElementById("about-us");
@@ -73,6 +75,7 @@ export function Header() {
           </div>
         </nav>
         <div
+          onClick={() => openContactForm()}
           className="header-button"
           data-cursor="hover"
         >
