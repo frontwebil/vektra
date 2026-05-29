@@ -32,11 +32,10 @@
   z-index: 1;
   height: 44px;
 
-  max-width: 250px;
+  max-width: 260px;
   width: 100%;
 
   vertical-align: middle;
-  border: 1px solid transparent;
 }
 .solutions-button-text {
   background-color: #193deb;
@@ -49,11 +48,11 @@
   border-radius: 100px;
   padding: 0 20px;
   margin-right: -10px;
+  border: 1px solid transparent;
   transition: all 0.3s ease-in-out;
 }
 .solutions-button-icon {
   background-color: #fff;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "./style.css";
 import "./layout.css";
+import { GoArrowUpRight } from "react-icons/go";
 
 export function Hero() {
   return (
@@ -121,10 +122,16 @@ export function Hero() {
             <span className="hero-main-content-italic">задають напрямок</span>
           </h1>
           <h2>Дизайн, розробка та SEO як єдина система росту бізнесу</h2>
-          <div className="hero-main-content-buttons">
-            <button className="hero-main-content-button-learn-services" data-cursor="hover">
+          <div className="hero-main-content-button">
+            <button
+              className="hero-main-content-button-learn-services"
+              data-cursor="hover"
+            >
               Ознайомитись із послугами
             </button>
+            <div className="hero-main-button-icon" data-cursor="hover">
+              <GoArrowUpRight />
+            </div>
           </div>
         </div>
         <div className="hero-bottom">

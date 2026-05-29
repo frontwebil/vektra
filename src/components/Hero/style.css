@@ -59,10 +59,9 @@
   margin-top: 24px;
 }
 
-.hero-main-content-buttons {
+.hero-main-content-button {
   margin-top: 52px;
   display: flex;
-  gap: 20px;
   align-items: center;
 }
 
@@ -80,8 +79,28 @@
   transition: all 0.3s ease;
 }
 
-.hero-main-content-button-learn-services:hover {
-  background-color: #193DEB;
+.hero-main-button-icon {
+  width: 0px;
+  background-color: #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  aspect-ratio: 1 / 1;
+  font-size: 22px;
+  transition: all 0.3s ease;
+  margin-left: -10px;
+}
+
+.hero-main-content-button:hover .hero-main-button-icon {
+  background-color: #193deb;
+  color: #fff;
+  width: 44px;
+}
+
+.hero-main-content-button:hover .hero-main-content-button-learn-services {
+  background-color: #193deb;
   color: #fff;
 }
 
@@ -155,4 +174,80 @@
   left: 0px;
   top: -40px;
   pointer-events: none;
+}
+
+@keyframes float-1 {
+  0%,
+  100% {
+    transform: rotate(5deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(5deg) translateY(-8px);
+  }
+}
+@keyframes float-2 {
+  0%,
+  100% {
+    transform: rotate(-5deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-5deg) translateY(-10px);
+  }
+}
+@keyframes float-3 {
+  0%,
+  100% {
+    transform: rotate(-5deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-5deg) translateY(-7px);
+  }
+}
+@keyframes float-4 {
+  0%,
+  100% {
+    transform: rotate(5deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(5deg) translateY(-9px);
+  }
+}
+
+@keyframes float-img-1 {
+  0%,
+  100% {
+    transform: rotate(8deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(8deg) translateY(-10px);
+  }
+}
+@keyframes float-img-2 {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero-top-1 {
+  animation: float-1 4s ease-in-out infinite;
+}
+.hero-top-2 {
+  animation: float-2 4.5s ease-in-out infinite;
+}
+.hero-bottom-1 {
+  animation: float-3 5s ease-in-out infinite;
+}
+.hero-bottom-2 {
+  animation: float-4 4.2s ease-in-out infinite;
+}
+
+.hero-top-img {
+  animation: float-img-1 4.3s ease-in-out infinite;
+}
+.hero-bottom-img {
+  animation: float-img-2 5s ease-in-out infinite;
 }

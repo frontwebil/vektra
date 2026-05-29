@@ -105,33 +105,26 @@ header .container {
   transition: all 0.3s ease-in-out;
 }
 .header-button-icon {
+  width: 0px;
+  color: #fff;
   background-color: #fff;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
   aspect-ratio: 1 / 1;
   font-size: 22px;
-  transition: all 0.3s ease-in-out;
-}
-
-.header-button-icon {
-  opacity: 0;
-  transform: translateX(0px);
-  z-index: 0;
-  width: 0;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  margin-left: -10px;
 }
 
 .header-button:hover .header-button-icon {
+  background-color: #193deb;
+  color: #fff;
   width: 44px;
-  opacity: 1;
-  transform: translateX(0);
 }
 
-.header-button:hover .header-button-text,
-.header-button:hover .header-button-icon {
+.header-button:hover .header-button-text {
   background-color: #193deb;
   color: rgba(220, 223, 228, 1);
 }
