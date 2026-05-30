@@ -32,17 +32,17 @@
 
 .ContactForm-wrapper {
   position: relative;
+  /* background: rgb(95, 95, 95); */
   background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(220, 223, 228, 1);
   box-shadow: 0px 48px 100px 0px rgba(13, 14, 32, 0.15);
 
   width: 100%;
-  height: 700px;
   max-width: 650px;
   margin: 0 auto;
   border-radius: 40px;
 
-  padding: 36px;
+  padding: 42px 36px;
 }
 
 .ContactForm-close {
@@ -52,6 +52,7 @@
   align-items: end;
   top: 36px;
   right: 36px;
+  padding-left: 10px;
 }
 
 .ContactForm-close svg {
@@ -76,4 +77,79 @@
 
   margin-top: 24px;
   margin-right: 36px;
+}
+
+.ContactForm-wrapper-form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  margin-top: 52px;
+}
+.ContactForm-wrapper-form-row {
+  display: flex;
+  gap: 20px;
+}
+.ContactForm-wrapper-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.ContactForm-wrapper-form-group label {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -5%;
+  vertical-align: middle;
+  color: rgba(2, 0, 40, 1);
+}
+.ContactForm-wrapper-form-group input,
+.ContactForm-wrapper-form-group textarea {
+  padding: 16px;
+  max-width: 100%;
+  width: 100%;
+  background: rgba(220, 223, 228, 0.2);
+  border-radius: 12px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -5%;
+}
+
+.ContactForm-wrapper-form-group-phone {
+  display: flex;
+  background: rgba(220, 223, 228, 0.2);
+  padding: 16px;
+  border-radius: 12px;
+}
+.ContactForm-wrapper-form-group-phone-label {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+  letter-spacing: -5%;
+}
+
+.ContactForm-wrapper-form-group-phone-input {
+  background-color: transparent !important;
+  padding: 0 !important;
+  padding-left: 3px !important;
+}
+
+.ContactForm-wrapper-form-button {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(25, 61, 235, 1);
+  border-radius: 100px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.ContactForm-wrapper-form-button:hover {
 }

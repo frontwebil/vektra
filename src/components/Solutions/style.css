@@ -52,7 +52,7 @@
   transition: all 0.3s ease-in-out;
 }
 .solutions-button-icon {
-  background-color: #fff;
+  background-color: #193deb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +60,7 @@
   aspect-ratio: 1 / 1;
   font-size: 22px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid transparent;
+  color: #fff;
 }
 
 .solutions-button-icon {
@@ -75,13 +75,6 @@
   width: 44px;
   opacity: 1;
   transform: translateX(0);
-}
-
-.solutions-button:hover .solutions-button-text,
-.solutions-button:hover .solutions-button-icon {
-  background-color: #ffffff;
-  color: #193deb;
-  border: 1px solid #193deb;
 }
 
 .solutions-desctiprion {

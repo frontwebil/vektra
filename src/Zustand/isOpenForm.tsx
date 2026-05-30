@@ -9,7 +9,7 @@ interface IsOpenFormStore {
 }
 
 export const useIsOpenForm = create<IsOpenFormStore>((set) => ({
-  isOpenContactForm: false,
+  isOpenContactForm: true,
 
   closeContactForm: () => set({ isOpenContactForm: false }),
 
@@ -20,4 +20,3 @@ export const useIsOpenForm = create<IsOpenFormStore>((set) => ({
       isOpenContactForm: !state.isOpenContactForm,
     })),
 }));
-
