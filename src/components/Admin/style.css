@@ -200,6 +200,10 @@
   font-size: 13px !important;
 }
 
+.admin-table-clickable {
+  cursor: pointer;
+}
+
 .admin-table-actions {
   display: flex;
   gap: 8px;
@@ -223,6 +227,11 @@
 .admin-badge--done {
   background: rgba(255, 255, 255, 0.06);
   color: rgba(255, 255, 255, 0.35);
+}
+
+.admin-badge--inactive {
+  background: rgba(255, 170, 0, 0.12);
+  color: rgba(255, 190, 60, 1);
 }
 
 /* === Buttons === */
@@ -456,6 +465,53 @@
 .modal-delete-warning {
   font-size: 13px !important;
   color: rgba(255, 107, 107, 0.7) !important;
+}
+
+/* === View modal === */
+.view-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.view-modal-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.view-modal-row--full {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.view-modal-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.view-modal-value {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.view-modal-text {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 16px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
 }
 
 /* === Mobile === */

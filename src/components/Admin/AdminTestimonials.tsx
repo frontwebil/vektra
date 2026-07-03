@@ -7,6 +7,7 @@ import "./style.css";
 import { Lead, Testimonials } from "../../../generated/prisma/client";
 import { TestimonialModal } from "./TestimonialModal";
 import { DeleteModal } from "./DeleteModal";
+import { ViewTestimonialModal } from "./ViewModal";
 
 export function AdminPanel({
   leeds,
@@ -25,6 +26,8 @@ export function AdminPanel({
   // Modal state
   const [testimonialModalOpen, setTestimonialModalOpen] = useState(false);
   const [editTestimonial, setEditTestimonial] =
+    useState<Testimonials | null>(null);
+  const [viewTestimonial, setViewTestimonial] =
     useState<Testimonials | null>(null);
   const [deleteModal, setDeleteModal] = useState<{
     open: boolean;
@@ -123,7 +126,7 @@ export function AdminPanel({
                   <tr>
                     <th>{"Ім`я"}</th>
                     <th>Категорія</th>
-                    <th>Посада</th>
+                    <th>Позиція</th>
                     <th>Текст</th>
                     <th>Статус</th>
                     <th>Дата</th>
@@ -132,7 +135,12 @@ export function AdminPanel({
                 </thead>
                 <tbody>
                   {alltestimonials.map((t) => (
-                    <tr key={t.id}>
+                    <tr
+                      key={t.id}
+                      className="admin-table-clickable"
+                      onClick={() => setViewTestimonial(t)}
+                      data-cursor="hover"
+                    >
                       <td>{t.name}</td>
                       <td>{t.category || "—"}</td>
                       <td>{t.position || "—"}</td>
@@ -142,7 +150,9 @@ export function AdminPanel({
                           className={`admin-badge ${
                             t.status === "New"
                               ? "admin-badge--new"
-                              : "admin-badge--done"
+                              : t.status === "Inactive"
+                                ? "admin-badge--inactive"
+                                : "admin-badge--done"
                           }`}
                         >
                           {t.status}
@@ -155,7 +165,8 @@ export function AdminPanel({
                         <div className="admin-table-actions">
                           <button
                             className="admin-btn admin-btn--secondary admin-btn--sm"
-                            onClick={() => {
+                            onClick={(e) => {
+                              e.stopPropagation();
                               setEditTestimonial(t);
                               setTestimonialModalOpen(true);
                             }}
@@ -165,14 +176,15 @@ export function AdminPanel({
                           </button>
                           <button
                             className="admin-btn admin-btn--danger admin-btn--sm"
-                            onClick={() =>
+                            onClick={(e) => {
+                              e.stopPropagation();
                               setDeleteModal({
                                 open: true,
                                 type: "testimonial",
                                 id: t.id,
                                 name: t.name,
-                              })
-                            }
+                              });
+                            }}
                             data-cursor="hover"
                           >
                             🗑️
@@ -196,6 +208,12 @@ export function AdminPanel({
           setEditTestimonial(null);
         }}
         testimonial={editTestimonial}
+      />
+
+      <ViewTestimonialModal
+        isOpen={!!viewTestimonial}
+        onClose={() => setViewTestimonial(null)}
+        testimonial={viewTestimonial}
       />
 
       <DeleteModal

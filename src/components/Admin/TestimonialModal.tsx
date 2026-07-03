@@ -117,10 +117,11 @@ export function TestimonialModal({
         </div>
 
         <div className="modal-form-group">
-          <label>Посада</label>
+          <label>Позиція (порядок)</label>
           <input
-            type="text"
-            placeholder="Напр. CEO, SomeCompany"
+            type="number"
+            placeholder="1, 2, 3..."
+            min="1"
             value={formData.position}
             onChange={(e) =>
               setFormData({ ...formData, position: e.target.value })
@@ -162,6 +163,7 @@ export function TestimonialModal({
           >
             <option value="New">New</option>
             <option value="Done">Done</option>
+            <option value="Inactive">Inactive</option>
           </select>
         </div>
 

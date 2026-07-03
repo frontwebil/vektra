@@ -121,6 +121,7 @@ export function LeadModal({ isOpen, onClose, lead }: LeadModalProps) {
           >
             <option value="New">New</option>
             <option value="Done">Done</option>
+            <option value="Inactive">Inactive</option>
           </select>
         </div>
 

@@ -7,6 +7,7 @@ import "./style.css";
 import { Lead, Testimonials } from "../../../generated/prisma/client";
 import { LeadModal } from "./LeadModal";
 import { DeleteModal } from "./DeleteModal";
+import { ViewLeadModal } from "./ViewModal";
 
 export function AdminPanel({
   leeds,
@@ -25,6 +26,7 @@ export function AdminPanel({
   // Modal state
   const [leadModalOpen, setLeadModalOpen] = useState(false);
   const [editLead, setEditLead] = useState<Lead | null>(null);
+  const [viewLead, setViewLead] = useState<Lead | null>(null);
   const [deleteModal, setDeleteModal] = useState<{
     open: boolean;
     type: "lead" | "testimonial";
@@ -133,7 +135,12 @@ export function AdminPanel({
                 </thead>
                 <tbody>
                   {allLeeds.map((leed) => (
-                    <tr key={leed.id}>
+                    <tr
+                      key={leed.id}
+                      className="admin-table-clickable"
+                      onClick={() => setViewLead(leed)}
+                      data-cursor="hover"
+                    >
                       <td>{leed.name}</td>
                       <td>{leed.phone}</td>
                       <td className="admin-table-message">
@@ -144,7 +151,9 @@ export function AdminPanel({
                           className={`admin-badge ${
                             leed.status === "New"
                               ? "admin-badge--new"
-                              : "admin-badge--done"
+                              : leed.status === "Inactive"
+                                ? "admin-badge--inactive"
+                                : "admin-badge--done"
                           }`}
                         >
                           {leed.status}
@@ -157,7 +166,8 @@ export function AdminPanel({
                         <div className="admin-table-actions">
                           <button
                             className="admin-btn admin-btn--secondary admin-btn--sm"
-                            onClick={() => {
+                            onClick={(e) => {
+                              e.stopPropagation();
                               setEditLead(leed);
                               setLeadModalOpen(true);
                             }}
@@ -167,14 +177,15 @@ export function AdminPanel({
                           </button>
                           <button
                             className="admin-btn admin-btn--danger admin-btn--sm"
-                            onClick={() =>
+                            onClick={(e) => {
+                              e.stopPropagation();
                               setDeleteModal({
                                 open: true,
                                 type: "lead",
                                 id: leed.id,
                                 name: leed.name,
-                              })
-                            }
+                              });
+                            }}
                             data-cursor="hover"
                           >
                             🗑️
@@ -198,6 +209,12 @@ export function AdminPanel({
           setEditLead(null);
         }}
         lead={editLead}
+      />
+
+      <ViewLeadModal
+        isOpen={!!viewLead}
+        onClose={() => setViewLead(null)}
+        lead={viewLead}
       />
 
       <DeleteModal
