@@ -41,16 +41,12 @@ export function AdminPanel({
         </a>
 
         <nav className="admin-sidebar-nav">
-          <a
-            href="/admin"
-            className="admin-sidebar-link active"
-            data-cursor="hover"
-          >
+          <a href="/admin" className="admin-sidebar-link " data-cursor="hover">
             Заявки
           </a>
           <a
-            href="/admin/testimonials"
-            className="admin-sidebar-link"
+            href="/admin"
+            className="admin-sidebar-link active"
             data-cursor="hover"
           >
             Відгуки
@@ -89,51 +85,47 @@ export function AdminPanel({
           </div>
         </div>
 
+        {/* Таблиця відгуків */}
         <div className="admin-section">
           <div className="admin-section-top">
-            <h2 className="admin-section-title">## Зявки</h2>
-            <button
-              className="admin-btn admin-btn--primary"
-              data-cursor="hover"
-            >
-              + Додати
-            </button>
+            <h2 className="admin-section-title">## Відгуки</h2>
+            
           </div>
-          {allLeeds.length === 0 ? (
-            <p className="admin-empty">Заявок поки немає</p>
+          {alltestimonials.length === 0 ? (
+            <p className="admin-empty">Відгуків поки немає</p>
           ) : (
             <div className="admin-table-wrapper">
               <table className="admin-table">
                 <thead>
                   <tr>
                     <th>Ім`я</th>
-                    <th>Телефон</th>
-                    <th>Повідомлення</th>
+                    <th>Категорія</th>
+                    <th>Посада</th>
+                    <th>Текст</th>
                     <th>Статус</th>
                     <th>Дата</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {allLeeds.map((leed) => (
-                    <tr key={leed.id}>
-                      <td>{leed.name}</td>
-                      <td>{leed.phone}</td>
-                      <td className="admin-table-message">
-                        {leed.message || "—"}
-                      </td>
+                  {alltestimonials.map((t) => (
+                    <tr key={t.id}>
+                      <td>{t.name}</td>
+                      <td>{t.category || "—"}</td>
+                      <td>{t.position || "—"}</td>
+                      <td className="admin-table-message">{t.text}</td>
                       <td>
                         <span
                           className={`admin-badge ${
-                            leed.status === "New"
+                            t.status === "New"
                               ? "admin-badge--new"
                               : "admin-badge--done"
                           }`}
                         >
-                          {leed.status}
+                          {t.status}
                         </span>
                       </td>
                       <td className="admin-table-date">
-                        {formatDate(leed.createdAt)}
+                        {formatDate(t.createdAt)}
                       </td>
                     </tr>
                   ))}

@@ -1,3 +1,4 @@
+import { AdminPanel } from "@/components/Admin/AdminTestimonials";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth";
@@ -18,6 +19,7 @@ export default async function page() {
   }
 
   const leeds = await prisma.lead.findMany();
+  const testimonials = await prisma.testimonials.findMany();
 
-  return <div>page</div>;
+  return <AdminPanel leeds={leeds} testimonials={testimonials} />;
 }
