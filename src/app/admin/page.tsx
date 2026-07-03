@@ -1,10 +1,9 @@
 import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
+import { AdminPanel } from "@/components/Admin/AdminPanel";
 
-export default async function Admin() {
+export default async function AdminPage() {
   const session = await getServerSession(authOptions);
 
-  console.log(session);
-
-  return <>page</>;
+  return <AdminPanel userName={session?.user?.name || "Admin"} />;
 }
