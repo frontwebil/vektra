@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
 import "./style.css";
 import { Lead, Testimonials } from "../../../generated/prisma/client";
+import { TestimonialModal } from "./TestimonialModal";
+import { DeleteModal } from "./DeleteModal";
 
 export function AdminPanel({
   leeds,
@@ -18,6 +21,17 @@ export function AdminPanel({
     (testimonial) => testimonial.status === "New",
   );
   const alltestimonials = testimonials;
+
+  // Modal state
+  const [testimonialModalOpen, setTestimonialModalOpen] = useState(false);
+  const [editTestimonial, setEditTestimonial] =
+    useState<Testimonials | null>(null);
+  const [deleteModal, setDeleteModal] = useState<{
+    open: boolean;
+    type: "lead" | "testimonial";
+    id: number | string;
+    name: string;
+  }>({ open: false, type: "testimonial", id: 0, name: "" });
 
   const formatDate = (date: Date) => {
     return new Date(date).toLocaleDateString("uk-UA", {
@@ -45,7 +59,7 @@ export function AdminPanel({
             Заявки
           </a>
           <a
-            href="/admin"
+            href="/admin/testimonials"
             className="admin-sidebar-link active"
             data-cursor="hover"
           >
@@ -91,6 +105,10 @@ export function AdminPanel({
             <h2 className="admin-section-title">## Відгуки</h2>
             <button
               className="admin-btn admin-btn--primary"
+              onClick={() => {
+                setEditTestimonial(null);
+                setTestimonialModalOpen(true);
+              }}
               data-cursor="hover"
             >
               + Додати
@@ -103,12 +121,13 @@ export function AdminPanel({
               <table className="admin-table">
                 <thead>
                   <tr>
-                    <th>Ім`я</th>
+                    <th>{"Ім`я"}</th>
                     <th>Категорія</th>
                     <th>Посада</th>
                     <th>Текст</th>
                     <th>Статус</th>
                     <th>Дата</th>
+                    <th>Дії</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -132,6 +151,34 @@ export function AdminPanel({
                       <td className="admin-table-date">
                         {formatDate(t.createdAt)}
                       </td>
+                      <td>
+                        <div className="admin-table-actions">
+                          <button
+                            className="admin-btn admin-btn--secondary admin-btn--sm"
+                            onClick={() => {
+                              setEditTestimonial(t);
+                              setTestimonialModalOpen(true);
+                            }}
+                            data-cursor="hover"
+                          >
+                            ✏️
+                          </button>
+                          <button
+                            className="admin-btn admin-btn--danger admin-btn--sm"
+                            onClick={() =>
+                              setDeleteModal({
+                                open: true,
+                                type: "testimonial",
+                                id: t.id,
+                                name: t.name,
+                              })
+                            }
+                            data-cursor="hover"
+                          >
+                            🗑️
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -140,6 +187,31 @@ export function AdminPanel({
           )}
         </div>
       </main>
+
+      {/* Модалки */}
+      <TestimonialModal
+        isOpen={testimonialModalOpen}
+        onClose={() => {
+          setTestimonialModalOpen(false);
+          setEditTestimonial(null);
+        }}
+        testimonial={editTestimonial}
+      />
+
+      <DeleteModal
+        isOpen={deleteModal.open}
+        onClose={() =>
+          setDeleteModal({
+            open: false,
+            type: "testimonial",
+            id: 0,
+            name: "",
+          })
+        }
+        type={deleteModal.type}
+        id={deleteModal.id}
+        name={deleteModal.name}
+      />
     </div>
   );
 }

@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
 import "./style.css";
 import { Lead, Testimonials } from "../../../generated/prisma/client";
+import { LeadModal } from "./LeadModal";
+import { DeleteModal } from "./DeleteModal";
 
 export function AdminPanel({
   leeds,
@@ -18,6 +21,16 @@ export function AdminPanel({
     (testimonial) => testimonial.status === "New",
   );
   const alltestimonials = testimonials;
+
+  // Modal state
+  const [leadModalOpen, setLeadModalOpen] = useState(false);
+  const [editLead, setEditLead] = useState<Lead | null>(null);
+  const [deleteModal, setDeleteModal] = useState<{
+    open: boolean;
+    type: "lead" | "testimonial";
+    id: number | string;
+    name: string;
+  }>({ open: false, type: "lead", id: 0, name: "" });
 
   const formatDate = (date: Date) => {
     return new Date(date).toLocaleDateString("uk-UA", {
@@ -94,6 +107,10 @@ export function AdminPanel({
             <h2 className="admin-section-title">## Зявки</h2>
             <button
               className="admin-btn admin-btn--primary"
+              onClick={() => {
+                setEditLead(null);
+                setLeadModalOpen(true);
+              }}
               data-cursor="hover"
             >
               + Додати
@@ -106,11 +123,12 @@ export function AdminPanel({
               <table className="admin-table">
                 <thead>
                   <tr>
-                    <th>Ім`я</th>
+                    <th>{"Ім`я"}</th>
                     <th>Телефон</th>
                     <th>Повідомлення</th>
                     <th>Статус</th>
                     <th>Дата</th>
+                    <th>Дії</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -135,6 +153,34 @@ export function AdminPanel({
                       <td className="admin-table-date">
                         {formatDate(leed.createdAt)}
                       </td>
+                      <td>
+                        <div className="admin-table-actions">
+                          <button
+                            className="admin-btn admin-btn--secondary admin-btn--sm"
+                            onClick={() => {
+                              setEditLead(leed);
+                              setLeadModalOpen(true);
+                            }}
+                            data-cursor="hover"
+                          >
+                            ✏️
+                          </button>
+                          <button
+                            className="admin-btn admin-btn--danger admin-btn--sm"
+                            onClick={() =>
+                              setDeleteModal({
+                                open: true,
+                                type: "lead",
+                                id: leed.id,
+                                name: leed.name,
+                              })
+                            }
+                            data-cursor="hover"
+                          >
+                            🗑️
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -143,6 +189,26 @@ export function AdminPanel({
           )}
         </div>
       </main>
+
+      {/* Модалки */}
+      <LeadModal
+        isOpen={leadModalOpen}
+        onClose={() => {
+          setLeadModalOpen(false);
+          setEditLead(null);
+        }}
+        lead={editLead}
+      />
+
+      <DeleteModal
+        isOpen={deleteModal.open}
+        onClose={() =>
+          setDeleteModal({ open: false, type: "lead", id: 0, name: "" })
+        }
+        type={deleteModal.type}
+        id={deleteModal.id}
+        name={deleteModal.name}
+      />
     </div>
   );
 }
