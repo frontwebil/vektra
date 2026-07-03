@@ -89,7 +89,12 @@ export function AdminPanel({
         <div className="admin-section">
           <div className="admin-section-top">
             <h2 className="admin-section-title">## Відгуки</h2>
-            
+            <button
+              className="admin-btn admin-btn--primary"
+              data-cursor="hover"
+            >
+              + Додати
+            </button>
           </div>
           {alltestimonials.length === 0 ? (
             <p className="admin-empty">Відгуків поки немає</p>
