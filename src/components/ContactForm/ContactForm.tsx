@@ -32,7 +32,7 @@ export function ContactForm() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/create-leed", {
+      const response = await fetch("/api/leed/create-leed", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

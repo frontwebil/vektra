@@ -27,10 +27,8 @@ export const authOptions: AuthOptions = {
           return null;
         }
 
-        const isValidPassword = await bcrypt.compare(
-          credentials.password,
-          process.env.ADMIN_PASSWORD!,
-        );
+        const isValidPassword =
+          credentials.password == process.env.ADMIN_PASSWORD;
 
         if (!isValidPassword) {
           return null;

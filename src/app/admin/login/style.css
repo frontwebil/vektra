@@ -47,6 +47,8 @@
 }
 
 .login-logo {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-bottom: 40px;
 }
