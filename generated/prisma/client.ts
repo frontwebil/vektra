@@ -46,3 +46,8 @@ export { Prisma }
  * 
  */
 export type Lead = Prisma.LeadModel
+/**
+ * Model Testimonials
+ * 
+ */
+export type Testimonials = Prisma.TestimonialsModel

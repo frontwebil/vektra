@@ -384,7 +384,8 @@ type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRe
 
 
 export const ModelName = {
-  Lead: 'Lead'
+  Lead: 'Lead',
+  Testimonials: 'Testimonials'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -400,7 +401,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "lead"
+    modelProps: "lead" | "testimonials"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -478,6 +479,80 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    Testimonials: {
+      payload: Prisma.$TestimonialsPayload<ExtArgs>
+      fields: Prisma.TestimonialsFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.TestimonialsFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.TestimonialsFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload>
+        }
+        findFirst: {
+          args: Prisma.TestimonialsFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.TestimonialsFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload>
+        }
+        findMany: {
+          args: Prisma.TestimonialsFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload>[]
+        }
+        create: {
+          args: Prisma.TestimonialsCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload>
+        }
+        createMany: {
+          args: Prisma.TestimonialsCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.TestimonialsCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload>[]
+        }
+        delete: {
+          args: Prisma.TestimonialsDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload>
+        }
+        update: {
+          args: Prisma.TestimonialsUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload>
+        }
+        deleteMany: {
+          args: Prisma.TestimonialsDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.TestimonialsUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.TestimonialsUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload>[]
+        }
+        upsert: {
+          args: Prisma.TestimonialsUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TestimonialsPayload>
+        }
+        aggregate: {
+          args: Prisma.TestimonialsAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateTestimonials>
+        }
+        groupBy: {
+          args: Prisma.TestimonialsGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.TestimonialsGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.TestimonialsCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.TestimonialsCountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -528,6 +603,20 @@ export const LeadScalarFieldEnum = {
 } as const
 
 export type LeadScalarFieldEnum = (typeof LeadScalarFieldEnum)[keyof typeof LeadScalarFieldEnum]
+
+
+export const TestimonialsScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  category: 'category',
+  position: 'position',
+  text: 'text',
+  avatarUrl: 'avatarUrl',
+  createdAt: 'createdAt',
+  status: 'status'
+} as const
+
+export type TestimonialsScalarFieldEnum = (typeof TestimonialsScalarFieldEnum)[keyof typeof TestimonialsScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -726,6 +815,7 @@ export type PrismaClientOptions = ({
 }
 export type GlobalOmitConfig = {
   lead?: Prisma.LeadOmit
+  testimonials?: Prisma.TestimonialsOmit
 }
 
 /* Types for Logging */

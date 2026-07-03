@@ -16,3 +16,15 @@ model Lead {
   updatedAt DateTime @updatedAt
   status    String
 }
+
+
+model Testimonials {
+  id          String   @id @default(cuid())
+  name        String
+  category String?
+  position    String?
+  text        String
+  avatarUrl   String?   // Посилання на фото
+  createdAt   DateTime @default(now())
+  status String
+}

@@ -51,7 +51,8 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  Lead: 'Lead'
+  Lead: 'Lead',
+  Testimonials: 'Testimonials'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -81,6 +82,20 @@ export const LeadScalarFieldEnum = {
 } as const
 
 export type LeadScalarFieldEnum = (typeof LeadScalarFieldEnum)[keyof typeof LeadScalarFieldEnum]
+
+
+export const TestimonialsScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  category: 'category',
+  position: 'position',
+  text: 'text',
+  avatarUrl: 'avatarUrl',
+  createdAt: 'createdAt',
+  status: 'status'
+} as const
+
+export type TestimonialsScalarFieldEnum = (typeof TestimonialsScalarFieldEnum)[keyof typeof TestimonialsScalarFieldEnum]
 
 
 export const SortOrder = {

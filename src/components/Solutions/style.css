@@ -1,8 +1,9 @@
 .solutions {
   background-color: #ffffff;
-  position: static;
+  position: sticky;
   z-index: 3;
-  padding: 180px 0 120px;
+  top: -180px;
+  padding: 180px 0 240px;
 }
 
 .solutions .container {

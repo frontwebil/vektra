@@ -28,6 +28,11 @@ const nyghtSerif = localFont({
       weight: "300",
       style: "normal",
     },
+    {
+      path: "./fonts/NyghtSerif-LightItalic.woff2",
+      weight: "300",
+      style: "italic",
+    },
   ],
   variable: "--font-nyght-serif",
 });
