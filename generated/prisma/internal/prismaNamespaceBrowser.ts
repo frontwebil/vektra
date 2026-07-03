@@ -75,6 +75,7 @@ export const LeadScalarFieldEnum = {
   name: 'name',
   phone: 'phone',
   message: 'message',
+  status: 'status',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const

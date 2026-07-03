@@ -4,6 +4,7 @@ import { Montserrat, Ubuntu } from "next/font/google";
 import "./globals.css";
 import "./reset.css";
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
+import { Toaster } from "sonner";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 const ubuntu = Ubuntu({
@@ -48,6 +49,21 @@ export default function RootLayout({
       className={`${montserrat.className} ${ubuntu.className} ${nyghtSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Toaster
+          position="top-right"
+          theme="dark"
+          toastOptions={{
+            style: {
+              background: "#0E1022",
+              color: "#fff",
+              border: "1px solid rgba(25, 61, 235, 0.35)",
+              borderRadius: "14px",
+              boxShadow: "0 10px 30px rgba(25, 61, 235, 0.2)",
+            },
+          }}
+          richColors
+          duration={5000}
+        />
         <CustomCursor />
         {children}
       </body>
