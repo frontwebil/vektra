@@ -38,7 +38,7 @@ export const authOptions: AuthOptions = {
           id: "admin",
           name: "Administrator",
           role: "admin",
-          loginSecret: process.env.LOGIN_SECRET,
+          loginSecret: process.env.LOGIN_SECRET || "",
         };
       },
     }),
