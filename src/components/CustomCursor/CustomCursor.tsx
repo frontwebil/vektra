@@ -2,8 +2,16 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function CustomCursor() {
+  const pathname = usePathname();
+
+  // Не показуємо кастомний курсор в адмінці
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
+
   const [position, setPosition] = useState({
     x: 0,
     y: 0,
@@ -20,11 +28,7 @@ export default function CustomCursor() {
 
       const target = e.target as HTMLElement;
 
-      if (target.closest("[data-cursor='hover']")) {
-        setHovered(true);
-      } else {
-        setHovered(false);
-      }
+      setHovered(!!target.closest("[data-cursor='hover']"));
     };
 
     window.addEventListener("mousemove", moveCursor);

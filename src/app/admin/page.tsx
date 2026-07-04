@@ -21,5 +21,9 @@ export default async function AdminPage() {
   const leeds = await prisma.lead.findMany();
   const testimonials = await prisma.testimonials.findMany();
 
-  return <AdminPanel leeds={leeds} testimonials={testimonials} />;
+  return (
+    <div className="default-cursor">
+      <AdminPanel leeds={leeds} testimonials={testimonials} />;
+    </div>
+  );
 }

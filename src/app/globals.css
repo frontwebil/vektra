@@ -8,6 +8,10 @@
   cursor: none;
 }
 
+.default-cursor {
+  cursor: default!important;
+}
+
 body {
   font-family: Montserrat;
 }
