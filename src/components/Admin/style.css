@@ -225,8 +225,8 @@
 }
 
 .admin-badge--done {
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.35);
+  background: rgba(29, 108, 0, 0.546);
+  color: rgba(255, 255, 255, 1);
 }
 
 .admin-badge--inactive {
@@ -325,12 +325,14 @@
 .modal-container {
   background: #141528;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
   width: 100%;
   max-width: 520px;
   max-height: 90vh;
   overflow-y: auto;
   animation: modalSlideIn 0.25s ease;
+
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(25, 61, 235, 0.8) rgba(255, 255, 255, 0.05);
 }
 
 @keyframes modalSlideIn {

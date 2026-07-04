@@ -98,9 +98,7 @@ export function TestimonialModal({
             type="text"
             placeholder="Ім'я клієнта"
             value={formData.name}
-            onChange={(e) =>
-              setFormData({ ...formData, name: e.target.value })
-            }
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
         </div>
 
@@ -135,9 +133,7 @@ export function TestimonialModal({
             placeholder="Текст відгуку"
             rows={4}
             value={formData.text}
-            onChange={(e) =>
-              setFormData({ ...formData, text: e.target.value })
-            }
+            onChange={(e) => setFormData({ ...formData, text: e.target.value })}
           />
         </div>
 
@@ -162,7 +158,7 @@ export function TestimonialModal({
             }
           >
             <option value="New">New</option>
-            <option value="Done">Done</option>
+            <option value="Active">Active</option>
             <option value="Inactive">Inactive</option>
           </select>
         </div>
