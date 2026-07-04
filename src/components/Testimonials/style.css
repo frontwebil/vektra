@@ -43,3 +43,65 @@
 
   max-width: 320px;
 }
+
+.testimonials-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.testimonials-card {
+  max-width: 420px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #0d0e20;
+  padding: 24px;
+}
+.testimonials-card-top {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+
+  border-bottom: 1px solid #dcdfe480;
+}
+.testimonials-card-img {
+  max-width: 64px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 100%;
+}
+
+.testimonials-card-img img {
+  border-radius: 100%;
+}
+
+.testimonials-card-top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.testimonials-card-top-name {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: -2%;
+}
+.testimonials-card-top-category {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -5%;
+}
+.testimonials-card-text {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -5%;
+  color: #020028c9;
+}

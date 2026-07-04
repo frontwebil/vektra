@@ -1,3 +1,5 @@
+"use client";
+
 import { useIsOpenForm } from "@/Zustand/isOpenForm";
 import "./style.css";
 import { IoCloseOutline } from "react-icons/io5";

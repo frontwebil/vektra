@@ -1,6 +1,13 @@
+"use client";
+import Image from "next/image";
+import type { Testimonials } from "../../../generated/prisma/client";
 import "./style.css";
 
-export function Testimonials() {
+export function Testimonials({
+  testimonials,
+}: {
+  testimonials: Testimonials[];
+}) {
   return (
     <section className="testimonials">
       <div className="container">
@@ -16,8 +23,28 @@ export function Testimonials() {
         </div>
       </div>
       <div className="container">
-        <div className="testimonials-card">
-          
+        <div className="testimonials-cards">
+          {testimonials.map((el) => (
+            <div className="testimonials-card" key={el.id}>
+              <div className="testimonials-card-top">
+                <div className="testimonials-card-img">
+                  <Image
+                    src={el.avatarUrl || "/Testimonials/placeholder.png"}
+                    alt="avatar"
+                    width={120}
+                    height={120}
+                  />
+                </div>
+                <div className="testimonials-card-top-text">
+                  <h2 className="testimonials-card-top-name">{el.name}</h2>
+                  <span className="testimonials-card-top-category">
+                    {el.category}
+                  </span>
+                </div>
+              </div>
+              <div className="testimonials-card-text">{el.text}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

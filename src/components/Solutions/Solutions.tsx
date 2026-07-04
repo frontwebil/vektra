@@ -1,3 +1,4 @@
+"use client";
 import { GoArrowUpRight } from "react-icons/go";
 import "./style.css";
 import Image from "next/image";

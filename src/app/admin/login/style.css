@@ -142,7 +142,7 @@ body:has(.login-page) * {
   margin-top: 8px;
   transition: all 0.25s ease;
   border: none;
-  cursor: pointer;
+  cursor: pointer!important;
 }
 
 .login-button:hover:not(:disabled) {

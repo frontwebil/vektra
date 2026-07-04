@@ -1,3 +1,4 @@
+"use client";
 import { PiHandPointingLight } from "react-icons/pi";
 import "./style.css";
 import { useState } from "react";
