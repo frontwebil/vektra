@@ -1,3 +1,16 @@
+/* === Default cursor for admin === */
+body:has(.admin-page) .custom-cursor,
+body:has(.login-page) .custom-cursor {
+  display: none !important;
+}
+
+body:has(.admin-page),
+body:has(.admin-page) *,
+body:has(.login-page),
+body:has(.login-page) * {
+  cursor: auto !important;
+}
+
 /* === Base layout === */
 .admin-page {
   display: flex;
