@@ -1,3 +1,13 @@
+/* Default cursor on login */
+body:has(.login-page) .custom-cursor {
+  display: none !important;
+}
+
+body:has(.login-page),
+body:has(.login-page) * {
+  cursor: auto !important;
+}
+
 .login-page {
   min-height: 100vh;
   display: flex;
