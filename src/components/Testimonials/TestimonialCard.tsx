@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Testimonials } from "../../../generated/prisma/client";
 import { IoIosArrowDown } from "react-icons/io";
 
-const COLLAPSED_HEIGHT = 72; // ~4 lines
+const COLLAPSED_HEIGHT = 160; // ~4 lines
 
 export function TestimonialCard({
   testimonial,
