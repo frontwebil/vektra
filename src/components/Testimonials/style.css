@@ -164,6 +164,29 @@
   transform: rotate(180deg);
 }
 
+/* === Pagination dots === */
+.testimonials-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  opacity: 1;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
 /* === Responsive === */
 @media (max-width: 1024px) {
   .testimonials-top {

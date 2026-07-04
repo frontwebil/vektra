@@ -5,9 +5,9 @@ import "./style.css";
 import { TestimonialCard } from "./TestimonialCard";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 export function Testimonials({
   testimonials,
@@ -31,19 +31,17 @@ export function Testimonials({
 
       <div className="testimonials-slider">
         <Swiper
-          modules={[FreeMode, Autoplay]}
+          modules={[Autoplay, Pagination]}
           slidesPerView={1}
           spaceBetween={20}
-          freeMode={{
-            enabled: true,
-            sticky: false,
-            momentumBounce: false,
-          }}
           loop={true}
           autoplay={{
             delay: 4000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
+          }}
+          pagination={{
+            clickable: true,
           }}
           breakpoints={{
             640: {
