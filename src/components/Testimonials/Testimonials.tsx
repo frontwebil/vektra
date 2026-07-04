@@ -1,13 +1,18 @@
 "use client";
-import Image from "next/image";
-import type { Testimonials } from "../../../generated/prisma/client";
+
+import type { Testimonials as TestimonialsType } from "../../../generated/prisma/client";
 import "./style.css";
 import { TestimonialCard } from "./TestimonialCard";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
 
 export function Testimonials({
   testimonials,
 }: {
-  testimonials: Testimonials[];
+  testimonials: TestimonialsType[];
 }) {
   return (
     <section className="testimonials">
@@ -23,12 +28,41 @@ export function Testimonials({
           </p>
         </div>
       </div>
-      <div className="container">
-        <div className="testimonials-cards">
+
+      <div className="testimonials-slider">
+        <Swiper
+          modules={[FreeMode, Autoplay]}
+          slidesPerView={1}
+          spaceBetween={20}
+          freeMode={{
+            enabled: true,
+            sticky: false,
+            momentumBounce: false,
+          }}
+          loop={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
+          }}
+          className="testimonials-swiper"
+        >
           {testimonials.map((el) => (
-            <TestimonialCard testimonial={el} key={el.id} />
+            <SwiperSlide key={el.id}>
+              <TestimonialCard testimonial={el} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
