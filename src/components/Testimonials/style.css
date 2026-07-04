@@ -104,4 +104,24 @@
   line-height: 18px;
   letter-spacing: -5%;
   color: #020028c9;
+
+  white-space: pre-wrap;
 }
+
+.testimonials-card-text-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #193deb;
+
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+
+  margin-top: 24px;
+}
+
+
