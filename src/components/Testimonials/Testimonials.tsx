@@ -35,13 +35,8 @@ export function Testimonials({
           slidesPerView={1}
           spaceBetween={20}
           loop={true}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
           pagination={{
-            clickable: true,
+            clickable: false,
           }}
           breakpoints={{
             640: {

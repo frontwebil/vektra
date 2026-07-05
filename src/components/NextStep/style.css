@@ -1,0 +1,102 @@
+.next-step {
+  background-color: #fff;
+  position: static;
+  z-index: 3;
+}
+.container {
+}
+.next-step-wrapper {
+  border-radius: 30px;
+  background-image: url("/next-step/bg-blur.png");
+  background-position: center;
+  background-size: cover;
+  padding: 60px;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.next-step-wrapper-title {
+  font-family: var(--font-nyght-serif), serif;
+
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 48px;
+  letter-spacing: -2%;
+  text-align: center;
+
+  max-width: 650px;
+  margin: 0 auto;
+}
+.next-step-wrapper-text {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -5%;
+  text-align: center;
+  color: #ffffffb2;
+
+  max-width: 650px;
+  margin: 24px auto;
+}
+
+.next-step-button {
+  margin-left: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  position: relative;
+  z-index: 1;
+  height: 44px;
+
+  max-width: 260px;
+  width: 100%;
+
+  vertical-align: middle;
+}
+.next-step-button-text {
+  background-color: #fff;
+  color: #193deb;
+
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  padding: 0 20px;
+  margin-right: -10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.next-step-button-icon {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  aspect-ratio: 1 / 1;
+  font-size: 22px;
+  transition: all 0.3s ease-in-out;
+  color: #193deb;
+}
+
+.next-step-button-icon {
+  opacity: 0;
+  transform: translateX(0px);
+  z-index: 0;
+  width: 0;
+  transition: 0.3s;
+}
+
+.next-step-button:hover .next-step-button-icon {
+  width: 44px;
+  opacity: 1;
+  transform: translateX(0);
+}

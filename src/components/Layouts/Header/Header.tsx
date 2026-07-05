@@ -58,7 +58,7 @@ export function Header() {
           <Link href={""} className="header-nav-link" data-cursor="hover">
             Контакти.
           </Link>
-          <p>/</p>
+          {/* <p>/</p>
           <div className="header-nav-languague-switcher">
             <button
               className="header-nav-languague-switcher-button"
@@ -72,7 +72,7 @@ export function Header() {
             >
               ENG
             </button>
-          </div>
+          </div> */}
         </nav>
         <div
           onClick={() => openContactForm()}

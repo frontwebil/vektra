@@ -1,0 +1,259 @@
+.faq {
+  position: static;
+  z-index: 3;
+  background-color: #fff;
+  padding: 120px 0;
+
+  margin-top: -60px;
+
+  border-radius: 60px 60px 0 0;
+}
+.faq .container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.faq-left {
+  max-width: 540px;
+}
+.faq-left-text {
+}
+.faq-left-text-title {
+  font-family: var(--font-nyght-serif), serif;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 52px;
+  line-height: 48px;
+  letter-spacing: -2%;
+
+  padding-bottom: 20px;
+}
+
+.faq-left-text-title span {
+  color: #193deb;
+}
+
+.faq-left-text-text {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -5%;
+
+  color: #02002880;
+
+  padding-bottom: 24px;
+}
+
+.faq-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  position: relative;
+  z-index: 1;
+  height: 44px;
+
+  max-width: 260px;
+  width: 100%;
+
+  vertical-align: middle;
+}
+.faq-button-text {
+  background-color: #193deb;
+  color: rgba(220, 223, 228, 1);
+
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  padding: 0 20px;
+  margin-right: -10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.faq-button-icon {
+  background-color: #193deb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  aspect-ratio: 1 / 1;
+  font-size: 22px;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+
+.faq-button-icon {
+  opacity: 0;
+  transform: translateX(0px);
+  z-index: 0;
+  width: 0;
+  transition: 0.3s;
+}
+
+.faq-button:hover .faq-button-icon {
+  width: 44px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.faq-right {
+  max-width: 800px;
+  width: 100%;
+  background-color: #c8b3f61f;
+  border-radius: 30px;
+}
+
+.faq-left-caraculi {
+  position: relative;
+}
+.faq-left-caraculi-top {
+  position: absolute;
+  top: 0;
+  right: 15%;
+}
+.faq-left-caraculi-planka {
+  color: #193deb;
+  background: #fff;
+  border: 1px solid #193deb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+  height: 32px;
+
+  border-radius: 100px;
+
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -5%;
+}
+.top-planka {
+  position: absolute;
+  top: 32px;
+  right: -50%;
+}
+.faq-left-caraculi-bottom {
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.bottom-top-left-planka {
+  position: absolute;
+  top: 17%;
+  left: 0;
+}
+.bottom-left-planka {
+  position: absolute;
+  right: 0;
+  bottom: 30%;
+}
+
+.faq-accordeon {
+  padding: 20px 52px 52px;
+}
+.faq-accordeon-row {
+}
+.faq-accordeon-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0;
+
+  border-bottom: 1px solid #dcdfe480;
+}
+.faq-accordeon-row-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 100%;
+  width: 100%;
+}
+.faq-accordeon-row-left-letter {
+  max-width: 30px;
+  width: 100%;
+
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -5%;
+
+  color: #193deb;
+}
+.faq-accordeon-row-left-question {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -5%;
+  color: #0d0e20;
+}
+.faq-accordeon-row-right {
+  font-size: 24px;
+  color: #193deb;
+}
+
+.faq-accordeon-row {
+  border-bottom: 1px solid #dcdfe480;
+}
+
+.faq-accordeon-row-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0;
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+
+.faq-accordeon-answer {
+  overflow: hidden;
+
+  max-height: 0;
+  opacity: 0;
+
+  transition:
+    max-height 0.45s ease,
+    opacity 0.35s ease,
+    padding 0.45s ease;
+
+  padding: 0 50px 0 50px;
+}
+
+.faq-accordeon-answer.open {
+  max-height: 300px;
+  opacity: 1;
+  padding: 0 50px 30px 50px;
+}
+
+.faq-accordeon-answer p {
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 170%;
+  color: #02002880;
+  margin: 0;
+}
+
+.faq-accordeon-row-right {
+  color: #193deb;
+  font-size: 24px;
+  transition: transform 0.35s ease;
+}
+
+.faq-accordeon-row-right.active {
+  transform: rotate(135deg);
+}
