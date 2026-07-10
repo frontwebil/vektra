@@ -1,5 +1,6 @@
 import { AboutUs } from "@/components/AboutUs/AboutUs";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
+import { ContactFormSection } from "@/components/ContactFormSection/ContactFormSection";
 import { Faq } from "@/components/Faq/Faq";
 import { Hero } from "@/components/Hero/Hero";
 import { Header } from "@/components/Layouts/Header/Header";
@@ -26,6 +27,7 @@ export default async function Home() {
       <Testimonials testimonials={testimonials} />
       <Faq />
       <NextStep />
+      <ContactFormSection />
     </>
   );
 }
