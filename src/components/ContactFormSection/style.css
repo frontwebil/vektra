@@ -40,7 +40,7 @@
 }
 .contact-form-section-content {
   display: flex;
-  gap: 20px;
+  gap: 52px 20px;
 }
 .contact-form-section-content-left {
   display: flex;
@@ -74,8 +74,62 @@
   gap: 32px;
 }
 .contact-form-section-content-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
+.contact-form-section-content-row span {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -5%;
+  color: #ffffff80;
+}
+
 .contact-form-section-content-row-title {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  leading-trim: NONE;
+  line-height: 22px;
+  letter-spacing: -5%;
+  vertical-align: middle;
+  color: #ffffff;
 }
 .contact-form-section-content-row-social {
+  display: flex;
+  gap: 12px;
+}
+.contact-form-section-content-row-social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.contact-form-section-content-row-social-icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.contact-form-section-content-row-social-link:hover {
+  background-color: #fff;
+  color: #193deb;
+}
+
+.contact-form-section-content-right {
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid #dcdfe4;
+
+  border-radius: 30px;
 }
