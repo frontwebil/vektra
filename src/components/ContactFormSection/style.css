@@ -4,6 +4,11 @@
   background-color: #fff;
   padding: 120px 0 60px;
 }
+
+.contact-form-section .container {
+  max-width: 1200px;
+}
+
 .contact-form-section-top {
   display: flex;
   justify-content: space-between;
@@ -50,9 +55,12 @@
   border-radius: 30px;
 
   background-image: url("/ContactForm/bg-blur.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 20px;
 
-  max-width: 450px;
+  max-width: 430px;
   width: 100%;
 }
 
@@ -132,4 +140,78 @@
   border: 1px solid #dcdfe4;
 
   border-radius: 30px;
+}
+
+.contact-form-section-content-right-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 36px;
+  height: 100%;
+  padding: 42px 36px;
+}
+.contact-form-section-content-right-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.contact-form-section-content-right-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.contact-form-section-content-right-form-group label {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -5%;
+  vertical-align: middle;
+  color: rgba(2, 0, 40, 1);
+}
+.contact-form-section-content-right-form-group input,
+.contact-form-section-content-right-form-group textarea {
+  padding: 16px;
+  max-width: 100%;
+  width: 100%;
+  background: rgba(220, 223, 228, 0.2);
+  border-radius: 12px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -5%;
+}
+
+.contact-form-section-content-right-form-group-phone {
+  display: flex;
+  background: rgba(220, 223, 228, 0.2);
+  padding: 16px;
+  border-radius: 12px;
+}
+.contact-form-section-content-right-form-group-phone-label {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+  letter-spacing: -5%;
+}
+
+.contact-form-section-content-right-form-group-phone-input {
+  background-color: transparent !important;
+  padding: 0 !important;
+  padding-left: 3px !important;
+}
+
+.contact-form-section-content-right-form-button {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(25, 61, 235, 1);
+  border-radius: 100px;
+  padding: 20px 15px;
+  transition: all 0.3s ease;
 }
