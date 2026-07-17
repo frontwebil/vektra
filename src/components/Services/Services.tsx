@@ -57,7 +57,7 @@ const services = [
 export function Services() {
   const [activeService, setActiveService] = useState(0);
   return (
-    <section className="services">
+    <section className="services" id="services">
       <div className="container">
         <h2 className="services-title">{`//`} Послуги</h2>
         <div className="services-container">

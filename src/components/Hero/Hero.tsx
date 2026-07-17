@@ -125,7 +125,7 @@ export function Hero() {
             які{" "}
             <span className="hero-main-content-italic">задають напрямок</span>
           </h1>
-          <h2>Дизайн, розробка та SEO як єдина система росту бізнесу</h2>
+          <h2>Дизайн, розробка та стратегія як єдина система росту бізнесу</h2>
           <div
             className="hero-main-content-button"
             onClick={() => openContactForm()}

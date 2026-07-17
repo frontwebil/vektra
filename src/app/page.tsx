@@ -2,9 +2,11 @@ import { AboutUs } from "@/components/AboutUs/AboutUs";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
 import { ContactFormSection } from "@/components/ContactFormSection/ContactFormSection";
 import { Faq } from "@/components/Faq/Faq";
+import { Footer } from "@/components/Footer/Footer";
 import { Hero } from "@/components/Hero/Hero";
 import { Header } from "@/components/Layouts/Header/Header";
 import { NextStep } from "@/components/NextStep/NextStep";
+import { SeoBlock } from "@/components/SeoBlock/SeoBlock";
 import { Services } from "@/components/Services/Services";
 import { Solutions } from "@/components/Solutions/Solutions";
 import { Testimonials } from "@/components/Testimonials/Testimonials";
@@ -28,6 +30,8 @@ export default async function Home() {
       <Faq />
       <NextStep />
       <ContactFormSection />
+      <SeoBlock />
+      <Footer />
     </>
   );
 }

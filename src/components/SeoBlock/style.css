@@ -1,0 +1,76 @@
+.seo-block {
+  position: static;
+  z-index: 3;
+  background: #fff;
+
+  padding-bottom: 120px;
+}
+
+.seo-block .container {
+  max-width: 1200px;
+}
+
+.seo-block-title {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 30px;
+  color: #0d0e20;
+}
+
+.seo-block-content {
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  position: relative;
+}
+
+.seo-block-content::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  background: linear-gradient(transparent, #fff);
+  transition: opacity 0.3s;
+}
+
+.seo-block-content--expanded {
+  max-height: 2000px;
+}
+
+.seo-block-content--expanded::after {
+  opacity: 0;
+}
+
+.seo-block-text {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 24px;
+  color: #0d0e20b2;
+}
+
+.seo-block-read-more {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  border: none;
+  background: transparent;
+  color: #193deb;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+}
+
+.seo-block-icon {
+  transition: transform 0.3s ease;
+}
+
+.seo-block-icon.active {
+  transform: rotate(180deg);
+}
