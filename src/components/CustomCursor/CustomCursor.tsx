@@ -42,7 +42,7 @@ export default function CustomCursor() {
     <div
       className={`custom-cursor ${hovered ? "hovered" : ""}`}
       style={{
-        transform: `translate(${position.x}px, ${position.y}px)`,
+        transform: `translate(${position.x - 20}px, ${position.y}px)`,
       }}
     >
       <Image
