@@ -16,11 +16,15 @@ export function ContactForm() {
 
   const [loading, setLoading] = useState(false);
 
-  const changePhoneNumber = (num: string) => {
-    if (!/^\d*$/.test(num)) return;
+  const changePhoneNumber = (value: string) => {
+    const digits = value.replace(/\D/g, "");
 
-    if (num.length > 9) return;
-    setFormData({ ...formData, phoneNumber: num });
+    const phone = digits.length > 9 ? digits.slice(-9) : digits;
+
+    setFormData((prev) => ({
+      ...prev,
+      phoneNumber: phone,
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

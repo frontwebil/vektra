@@ -74,3 +74,36 @@
 .seo-block-icon.active {
   transform: rotate(180deg);
 }
+
+@media only screen and (max-width: 1024px) {
+  .seo-block {
+    padding-bottom: 60px;
+  }
+  .seo-block-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .seo-block-text {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 724px) {
+  .seo-block-content {
+    max-height: 300px;
+  }
+  .seo-block-text {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .seo-block-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .seo-block-content--expanded{
+    max-height: 2000px!important;
+  }
+}

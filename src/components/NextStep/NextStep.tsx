@@ -24,7 +24,7 @@ export function NextStep() {
             data-cursor="hover"
             onClick={() => openContactForm()}
           >
-            <div className="next-step-button-text">Хочу такий результат</div>
+            <div className="next-step-button-text">Отримати рішення</div>
             <div className="next-step-button-icon">
               <GoArrowUpRight />
             </div>

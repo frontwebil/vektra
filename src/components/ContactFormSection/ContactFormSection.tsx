@@ -17,11 +17,15 @@ export function ContactFormSection() {
 
   const [loading, setLoading] = useState(false);
 
-  const changePhoneNumber = (num: string) => {
-    if (!/^\d*$/.test(num)) return;
+  const changePhoneNumber = (value: string) => {
+    const digits = value.replace(/\D/g, "");
 
-    if (num.length > 9) return;
-    setFormData({ ...formData, phoneNumber: num });
+    const phone = digits.length > 9 ? digits.slice(-9) : digits;
+
+    setFormData((prev) => ({
+      ...prev,
+      phoneNumber: phone,
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -92,6 +96,12 @@ export function ContactFormSection() {
                 width={400}
                 height={300}
               />
+              <div className="contact-form-section-content-left-img-card card-1">
+                Запуск проєкту
+              </div>
+              <div className="contact-form-section-content-left-img-card card-2">
+                Швидкий старт
+              </div>
             </div>
             <div className="contact-form-section-content-text">
               <div className="contact-form-section-content-row">
@@ -180,7 +190,7 @@ export function ContactFormSection() {
                       +380
                     </label>
                     <input
-                      type="text"
+                      type="tel"
                       id="section-phone"
                       placeholder="00-000-0000"
                       className="contact-form-section-content-right-form-group-phone-input"

@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useScreenWidth } from "@/useFunc/useScreenWidth";
 
 export default function CustomCursor() {
+  const width = useScreenWidth();
   const pathname = usePathname();
 
   // Не показуємо кастомний курсор в адмінці
@@ -37,6 +39,8 @@ export default function CustomCursor() {
       window.removeEventListener("mousemove", moveCursor);
     };
   }, []);
+
+  if (width <= 1024) return;
 
   return (
     <div

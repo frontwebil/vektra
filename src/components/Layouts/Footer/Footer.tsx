@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import "./style.css";
 import { PiTelegramLogoLight, PiThreadsLogo } from "react-icons/pi";
 import { FaInstagram } from "react-icons/fa";
+import Image from "next/image";
+import { useScreenWidth } from "@/useFunc/useScreenWidth";
 
 export function Footer() {
+  const width = useScreenWidth();
   return (
     <footer>
       <div className="container">
@@ -113,7 +118,36 @@ export function Footer() {
             </div>
           </div>
         </div>
+        <div className="footer-bottom">
+          <div className="footer-bottom-left">
+            <div className="footer-bottom-left-logo">
+              <Image
+                src={"/Logo/Vektra-white.svg"}
+                width={235}
+                height={100}
+                alt="Vektra"
+              />
+              <p className="footer-logo-text">agency</p>
+            </div>
+            <p className="footer-bottom-left-text">
+              Поєднуємо дизайн, розробку та digital-стратегію в єдиний вектор
+              росту для сучасного бізнесу
+            </p>
+          </div>
+          {width >= 724 && (
+            <div className="footer-bottom-right">
+              <p>© 2026 Vectra Agency. All rights reserved.</p>
+            </div>
+          )}
+        </div>
       </div>
+      {width <= 724 && (
+        <div className="container">
+          <p className="footer-all-rights">
+            © 2026 Vectra Agency. All rights reserved.
+          </p>
+        </div>
+      )}
     </footer>
   );
 }

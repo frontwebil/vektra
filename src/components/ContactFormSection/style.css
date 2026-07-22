@@ -37,7 +37,6 @@
   font-weight: 400;
   font-style: Regular;
   font-size: 16px;
-  leading-trim: NONE;
   line-height: 18px;
   letter-spacing: -5%;
 
@@ -67,6 +66,7 @@
 .contact-form-section-content-left-img {
   max-width: 330px;
   width: 100%;
+  position: relative;
 }
 
 .contact-form-section-content-left-img img {
@@ -102,7 +102,6 @@
   font-weight: 500;
   font-style: Medium;
   font-size: 20px;
-  leading-trim: NONE;
   line-height: 22px;
   letter-spacing: -5%;
   vertical-align: middle;
@@ -214,4 +213,148 @@
   border-radius: 100px;
   padding: 20px 15px;
   transition: all 0.3s ease;
+}
+
+.contact-form-section-content-left-img-card {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -5%;
+  border-radius: 100px;
+  background: #ffffff;
+  width: max-content;
+  color: #193deb;
+
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+
+  position: absolute;
+}
+.card-1 {
+  top: 8%;
+  right: 0;
+}
+.card-2 {
+  bottom: 10%;
+  left: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact-form-section {
+    position: static;
+    z-index: 3;
+    background-color: #fff;
+    padding: 80px 0 60px;
+  }
+  .contact-form-section-top-title {
+    font-size: 42px;
+    line-height: 38px;
+  }
+  .contact-form-section-top-description {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .contact-form-section-content-left-img {
+    max-width: 240px;
+  }
+  .contact-form-section-content-left {
+    max-width: 340px;
+  }
+  .card-1 {
+    top: 8%;
+    right: -10%;
+  }
+  .card-2 {
+    bottom: 10%;
+    left: -10%;
+  }
+  .contact-form-section-content-row span {
+    font-size: 14px;
+  }
+  .contact-form-section-content-row-title {
+    font-size: 16px;
+  }
+  .contact-form-section-content-row {
+    gap: 12px;
+  }
+  .contact-form-section-content-text {
+    gap: 24px;
+  }
+  .contact-form-section-content-right-form {
+    padding: 40px 20px;
+  }
+  .contact-form-section-content-right-form-group label {
+    font-size: 16px;
+  }
+  .contact-form-section-content-right-form-group input,
+  .contact-form-section-content-right-form-group textarea {
+    padding: 14px;
+  }
+  .contact-form-section-content-right-form-button {
+    padding: 16px 15px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-form-section-content-left {
+    max-width: 40%;
+  }
+  .card-1 {
+    top: 0;
+    right: 0;
+  }
+  .card-2 {
+    bottom: 0;
+    left: 0;
+  }
+  .contact-form-section-top-title {
+    font-size: 32px;
+    line-height: 28px;
+  }
+
+  .contact-form-section-content-text {
+    margin-top: 10px;
+  }
+  .contact-form-section-top {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .contact-form-section {
+    position: static;
+    z-index: 3;
+    background-color: #fff;
+    padding: 60px 0 60px;
+  }
+  .contact-form-section-content-left {
+    max-width: 100%;
+  }
+  .contact-form-section-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-form-section-content-left-img img {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  .contact-form-section-content-left-img {
+    max-width: 340px;
+  }
+  .contact-form-section-content-text {
+    margin-top: 35px;
+  }
+  .contact-form-section-content-right-form-row {
+    gap: 20px;
+  }
 }
