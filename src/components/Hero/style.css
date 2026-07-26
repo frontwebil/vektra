@@ -251,3 +251,43 @@
 .hero-bottom-img {
   animation: float-img-2 5s ease-in-out infinite;
 }
+
+.star-1,
+.star-2,
+.star-3,
+.star-4 {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+
+  animation: star-glow 3s ease-in-out infinite;
+}
+
+@keyframes star-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5))
+      drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 1))
+      drop-shadow(0 0 25px rgba(255, 255, 255, 0.7))
+      drop-shadow(0 0 45px rgba(255, 255, 255, 0.4));
+  }
+}
+
+.star-1 {
+  animation-delay: 0s;
+}
+
+.star-2 {
+  animation-delay: 0.8s;
+}
+
+.star-3 {
+  animation-delay: 1.6s;
+}
+
+.star-4 {
+  animation-delay: 2.4s;
+}

@@ -5,9 +5,13 @@ import { GoArrowUpRight } from "react-icons/go";
 import "./style.css";
 import Image from "next/image";
 import { FaqAccordeon } from "./FaqAccordeon";
+import { useScreenWidth } from "@/useFunc/useScreenWidth";
 
 export function Faq() {
   const { openContactForm } = useIsOpenForm();
+  const width = useScreenWidth();
+
+  console.log(width);
 
   return (
     <section className="faq">
@@ -32,38 +36,69 @@ export function Faq() {
                 <GoArrowUpRight />
               </div>
             </span>
-            <div className="faq-left-caraculi">
-              <div className="faq-left-caraculi-top">
-                <Image
-                  src={"/shape/shape-3.webp"}
-                  width={170}
-                  height={170}
-                  alt="shape"
-                />
-                <p className="faq-left-caraculi-planka top-planka">
-                  Без зайвих ризиків
-                </p>
+            {width > 920 && (
+              <div className="faq-left-caraculi">
+                <div className="faq-left-caraculi-top">
+                  <Image
+                    src={"/shape/shape-3.webp"}
+                    width={170}
+                    height={170}
+                    alt="shape"
+                  />
+                  <p className="faq-left-caraculi-planka top-planka">
+                    Без зайвих ризиків
+                  </p>
+                </div>
+                <div className="faq-left-caraculi-bottom">
+                  <Image
+                    src={"/shape/shape-2.webp"}
+                    width={315}
+                    height={240}
+                    alt="shape"
+                  />
+                  <p className="faq-left-caraculi-planka bottom-top-left-planka">
+                    Чіткий вектор
+                  </p>
+                  <p className="faq-left-caraculi-planka bottom-left-planka">
+                    Керований процес
+                  </p>
+                </div>
               </div>
-              <div className="faq-left-caraculi-bottom">
-                <Image
-                  src={"/shape/shape-2.webp"}
-                  width={315}
-                  height={240}
-                  alt="shape"
-                />
-                <p className="faq-left-caraculi-planka bottom-top-left-planka">
-                  Чіткий вектор
-                </p>
-                <p className="faq-left-caraculi-planka bottom-left-planka">
-                  Керований процес
-                </p>
-              </div>
-            </div>
+            )}
           </div>
         </div>
         <div className="faq-right">
           <FaqAccordeon />
         </div>
+        {width <= 920 && (
+          <div className="faq-left-caraculi">
+            <div className="faq-left-caraculi-top">
+              <Image
+                src={"/shape/shape-3.webp"}
+                width={170}
+                height={170}
+                alt="shape"
+              />
+              <p className="faq-left-caraculi-planka top-planka">
+                Без зайвих ризиків
+              </p>
+            </div>
+            <div className="faq-left-caraculi-bottom">
+              <Image
+                src={"/shape/shape-2.webp"}
+                width={315}
+                height={240}
+                alt="shape"
+              />
+              <p className="faq-left-caraculi-planka bottom-top-left-planka">
+                Чіткий вектор
+              </p>
+              <p className="faq-left-caraculi-planka bottom-left-planka">
+                Керований процес
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

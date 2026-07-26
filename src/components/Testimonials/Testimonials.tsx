@@ -36,7 +36,7 @@ export function Testimonials({
           spaceBetween={20}
           loop={true}
           pagination={{
-            clickable: false,
+            clickable: true,
           }}
           breakpoints={{
             640: {
