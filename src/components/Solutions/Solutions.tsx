@@ -3,9 +3,11 @@ import { GoArrowUpRight } from "react-icons/go";
 import "./style.css";
 import Image from "next/image";
 import { useIsOpenForm } from "@/Zustand/isOpenForm";
+import { useScreenWidth } from "@/useFunc/useScreenWidth";
 
 export function Solutions() {
   const { openContactForm } = useIsOpenForm();
+  const width = useScreenWidth();
 
   return (
     <section className="solutions">
@@ -13,6 +15,24 @@ export function Solutions() {
         <h3 className="solutions-title">
           <span style={{ color: "#193DEB" }}>Рішення</span>
           , що рухають <br /> бізнес вперед{" "}
+          {width > 860 && (
+            <span
+              className="solutions-button"
+              data-cursor="hover"
+              onClick={() => openContactForm()}
+            >
+              <div className="solutions-button-text">Хочу такий результат</div>
+              <div className="solutions-button-icon">
+                <GoArrowUpRight />
+              </div>
+            </span>
+          )}
+        </h3>
+        <p className="solutions-desctiprion">
+          Реалізовані проєкти, де стратегія, дизайн і розробка працюють як
+          єдиний вектор
+        </p>
+        {width <= 860 && (
           <span
             className="solutions-button"
             data-cursor="hover"
@@ -23,11 +43,7 @@ export function Solutions() {
               <GoArrowUpRight />
             </div>
           </span>
-        </h3>
-        <p className="solutions-desctiprion">
-          Реалізовані проєкти, де стратегія, дизайн і розробка працюють як
-          єдиний вектор
-        </p>
+        )}
 
         <Image
           src={"/Solutions/shape.webp"}
