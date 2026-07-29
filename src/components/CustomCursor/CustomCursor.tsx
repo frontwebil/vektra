@@ -3,16 +3,9 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { useScreenWidth } from "@/useFunc/useScreenWidth";
 
 export default function CustomCursor() {
-  const width = useScreenWidth();
   const pathname = usePathname();
-
-  // Не показуємо кастомний курсор в адмінці
-  if (pathname.startsWith("/admin")) {
-    return null;
-  }
 
   const [position, setPosition] = useState({
     x: 0,
@@ -20,8 +13,31 @@ export default function CustomCursor() {
   });
 
   const [hovered, setHovered] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(pointer: coarse)");
+
+    const updateDevice = () => {
+      setIsTouchDevice(mediaQuery.matches);
+    };
+
+    updateDevice();
+
+    mediaQuery.addEventListener("change", updateDevice);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateDevice);
+    };
+  }, []);
+
+  useEffect(() => {
+    setIsTouchDevice(window.matchMedia("(pointer: coarse)").matches);
+  }, []);
+
+  useEffect(() => {
+    if (isTouchDevice) return;
+
     const moveCursor = (e: MouseEvent) => {
       setPosition({
         x: e.clientX,
@@ -38,9 +54,11 @@ export default function CustomCursor() {
     return () => {
       window.removeEventListener("mousemove", moveCursor);
     };
-  }, []);
+  }, [isTouchDevice]);
 
-  if (width <= 1024) return;
+  if (pathname.startsWith("/admin") || isTouchDevice) {
+    return null;
+  }
 
   return (
     <div
@@ -51,7 +69,7 @@ export default function CustomCursor() {
     >
       <Image
         src={hovered ? "/cursor-hover.webp" : "/cursor.webp"}
-        alt="cursor"
+        alt=""
         width={100}
         height={100}
         priority

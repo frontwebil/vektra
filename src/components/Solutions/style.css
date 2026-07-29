@@ -4,6 +4,7 @@
   z-index: 3;
   top: -180px;
   padding: 180px 0 240px;
+  overflow: hidden;
 }
 
 .solutions .container {
@@ -382,10 +383,25 @@
     align-items: center;
     justify-items: center;
   }
-      .solutions-shape {
-        top: 4%;
-      }
-      .solution-card{
-        max-width: 500px;
-      }
+  .solutions-shape {
+    top: 4%;
+  }
+  .solution-card {
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .solution-img:first-child {
+    max-width: 40%;
+    top: 10%;
+    left: 11%;
+    transform: rotate(-6deg);
+    aspect-ratio: 26 / 40;
+  }
+  .solution-img:nth-child(3) {
+    max-width: 38%;
+    top: 16%;
+    aspect-ratio: 26 / 40;
+  }
 }

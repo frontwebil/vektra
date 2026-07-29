@@ -13,25 +13,25 @@ import { Testimonials } from "@/components/Testimonials/Testimonials";
 import { prisma } from "@/lib/prisma";
 
 export default async function Home() {
-  // const testimonials = await prisma.testimonials.findMany({
-  //   orderBy: {
-  //     position: "asc",
-  //   },
-  // });
+  const testimonials = await prisma.testimonials.findMany({
+    orderBy: {
+      position: "asc",
+    },
+  });
   return (
     <>
       {/* <ContactForm /> */}
-      {/* <Header /> */}
-      {/* <Hero /> */}
+      <Header />
+      <Hero />
       {/* <AboutUs /> */}
       {/* <Services /> */}
-      <Solutions />
+      {/* <Solutions /> */}
       {/* <Testimonials testimonials={testimonials} /> */}
-      <Faq />
+      {/* <Faq />
       <NextStep />
       <ContactFormSection />
       <SeoBlock />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

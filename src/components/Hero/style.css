@@ -3,7 +3,7 @@
   top: 0px;
   width: 100%;
   overflow: hidden;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
 }
 
 .hero-bg {
@@ -39,6 +39,7 @@
 
 .hero-main-content {
   position: absolute;
+  z-index: 3;
   top: calc(50% + 40px);
   left: 50%;
   transform: translate(-50%, -50%);
@@ -107,6 +108,7 @@
 .hero-top {
   width: 230px;
   height: 140px;
+  margin-left: 16px;
 
   position: relative;
 }
@@ -152,7 +154,7 @@
   height: 160px;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 16px;
   margin-left: auto;
 }
 .hero-bottom-1 {
@@ -290,4 +292,188 @@
 
 .star-4 {
   animation-delay: 2.4s;
+}
+
+.hero-main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-main-content h1 {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 68px;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+}
+
+.hero-main-content-span-1 {
+  display: inline-block;
+  background-image: url("/Hero/span-1.png");
+  width: 100px;
+  height: 52px;
+}
+
+.hero-main-content-span-2 {
+  display: inline-block;
+  background-image: url("/Hero/span-2.png");
+  width: 100px;
+  height: 52px;
+}
+
+@media (max-width: 1024px) {
+  .hero-main-content h1 {
+    font-size: 54px;
+    line-height: 52px;
+  }
+  .hero-main-content-span-1 {
+    width: 80px;
+    height: 42px;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero-main-content-span-2 {
+    width: 80px;
+    height: 42px;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero-main-content h2 {
+    font-size: 18px;
+  }
+  .hero-main-content h2 {
+    margin-top: 18px;
+  }
+  .hero-main-content-button {
+    margin-top: 40px;
+  }
+  .hero-main-content-button-learn-services {
+    font-size: 16px;
+  }
+  .hero-bottom-img {
+    width: 100px;
+  }
+  .hero-bottom {
+    width: 220px;
+    height: 130px;
+  }
+  .hero-bottom-2 {
+    top: 80px;
+  }
+  .hero-bottom-1 {
+    top: 25px;
+  }
+  .hero-bottom {
+    height: 130px;
+  }
+  .hero-bottom-img {
+    left: 25px;
+  }
+  .hero-top {
+    height: 130px;
+    width: 210px;
+  }
+  .hero-top-img {
+    width: 100px;
+    right: 20px;
+    bottom: 2px;
+  }
+  .hero-absolute-text-card {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 724px) {
+  .hero-main-content h1 {
+    font-size: 36px;
+    line-height: 34px;
+  }
+  .hero-main-content-span-1,
+  .hero-main-content-span-2 {
+    background-position: center;
+    background-size: cover;
+    width: 57px;
+    height: 29px;
+    display: inline-block;
+  }
+  .hero-main-content {
+    padding: 0 20px 0;
+  }
+  .hero-main-content h2 {
+    font-size: 16px;
+    margin-top: 16px;
+    text-align: center;
+  }
+  .hero-main-content-button {
+    margin-top: 24px;
+  }
+  .hero-main-button-icon {
+    width: 44px;
+    background-color: #dcdfe4;
+    color: #000000;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-main-content h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .hero-absolute-text-card {
+    font-size: 10px;
+    padding: 3.5px 6.5px;
+  }
+  .hero-top {
+    width: 185px;
+    height: 120px;
+  }
+  .hero-top-img,
+  .hero-bottom-img {
+    width: 80px;
+  }
+
+  .hero-top-img {
+    bottom: 20px;
+    right: 40px;
+  }
+  .hero-bottom {
+    width: 185px;
+    height: 110px;
+  }
+  .hero-bottom-img {
+    left: 30px;
+    top: -20px;
+  }
+  .hero-bottom-2 {
+    top: 70px;
+  }
+  .hero-top-1 {
+    bottom: 110px;
+    left: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-main-content h1 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .hero-main-content-button{
+    margin-top: 20px;
+  }
+  .hero-main-content-button-learn-services{
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+  .hero-main-button-icon{
+    width: 40px;
+  }
 }
