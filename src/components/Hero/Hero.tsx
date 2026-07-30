@@ -126,20 +126,20 @@ export function Hero() {
             <span className="hero-main-content-italic">задають напрямок</span>
           </h1>
           <h2>Дизайн, розробка та стратегія як єдина система росту бізнесу</h2>
-          <div
+          <button
             className="hero-main-content-button"
             onClick={() => openContactForm()}
           >
-            <button
+            <div
               className="hero-main-content-button-learn-services"
               data-cursor="hover"
             >
               Ознайомитись із послугами
-            </button>
+            </div>
             <div className="hero-main-button-icon" data-cursor="hover">
               <GoArrowUpRight />
             </div>
-          </div>
+          </button>
         </div>
         <div className="hero-bottom">
           <div className="hero-absolute-text-card hero-bottom-1">Зростання</div>
@@ -148,6 +148,7 @@ export function Hero() {
           </div>
           <Image
             src={"/Hero/shape-2.webp"}
+            aria-hidden="true"
             width={180}
             height={180}
             alt=""
