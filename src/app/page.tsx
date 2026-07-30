@@ -23,15 +23,15 @@ export default async function Home() {
       {/* <ContactForm /> */}
       <Header />
       <Hero />
-      {/* <AboutUs /> */}
+      <AboutUs />
       {/* <Services /> */}
-      {/* <Solutions /> */}
+      {/* <Solutions />
       <Testimonials testimonials={testimonials} />
       <Faq />
       <NextStep />
       <ContactFormSection />
       <SeoBlock />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

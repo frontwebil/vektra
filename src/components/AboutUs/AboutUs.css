@@ -20,6 +20,7 @@
   letter-spacing: -5%;
   max-width: 205px;
   color: rgba(2, 0, 40, 0.5);
+  flex-shrink: 0;
 }
 .about-us-title {
   text-align: center;
@@ -46,6 +47,7 @@
   letter-spacing: -5%;
   max-width: 205px;
   color: rgba(2, 0, 40, 0.5);
+  flex-shrink: 0;
 }
 
 .about-us-title-see-more {
@@ -217,4 +219,135 @@
 .about-us-card.center .about-us-card-img img {
   position: relative;
   z-index: 1;
+}
+
+.about-us-learn-services {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+  .about-us-title h2 {
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .about-us-title h2 {
+    font-size: 28px;
+    line-height: 24px;
+  }
+  .about-us-right-text,
+  .about-us-left-text {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: 160px;
+  }
+  .about-us {
+    padding-top: 70px;
+  }
+
+  .about-us-card-title {
+    font-size: 26px;
+    line-height: 24px;
+  }
+
+  .about-us-card-title.center {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-us-top {
+    flex-direction: column;
+  }
+
+  .about-us-title h2 {
+    text-align: left;
+  }
+
+  .about-us-title-see-more {
+    display: none;
+    text-align: left;
+    align-items: start;
+  }
+  .about-us-right-text,
+  .about-us-left-text {
+    max-width: 100%;
+    text-align: left;
+  }
+  .about-us-learn-services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #193deb;
+    color: #ffffff;
+    gap: 12px;
+
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -5%;
+    padding: 12px;
+    border-radius: 100px;
+  }
+
+  .about-us-cards {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .about-us-card.center {
+    margin-top: 0;
+  }
+
+  .about-us-card {
+    max-width: 500px;
+  }
+
+  .about-us-card-img {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .about-us-card-text-first-1 {
+    left: -40px;
+  }
+  .about-us-card-text-first-2 {
+    right: -40px;
+  }
+  .about-us-card-text-first-3 {
+    left: 16px;
+  }
+  .about-us-card-text-last-1 {
+    right: -20px;
+  }
+  .about-us-card-text-last-2 {
+    left: -23px;
+  }
+  .about-us-card-text-center-1 {
+    left: -20px;
+    top: 15px;
+  }
+  .about-us-card-text-center-2 {
+    right: -10px;
+  }
+  .about-us-card-text-center-3 {
+    right: -15px;
+  }
+}
+
+@media (max-width: 460px) {
+  .about-us-card-title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 16px;
+  }
+  .about-us-card-title.center {
+    margin-top: 16px;
+        font-size: 30px;
+    line-height: 28px;
+  }
 }

@@ -3,8 +3,10 @@ import Link from "next/link";
 import "./AboutUs.css";
 import { GoArrowUpRight } from "react-icons/go";
 import Image from "next/image";
+import { useScreenWidth } from "@/useFunc/useScreenWidth";
 
 export function AboutUs() {
+  const width = useScreenWidth();
   return (
     <section id="about-us" className="about-us">
       <div className="container">
@@ -24,7 +26,11 @@ export function AboutUs() {
                 дають конкурентну перевагу
               </span>
             </h2>
-            <Link href={"/"} className="about-us-title-see-more" data-cursor="hover">
+            <Link
+              href={"/"}
+              className="about-us-title-see-more"
+              data-cursor="hover"
+            >
               <p>Переглянути послуги</p>
               <GoArrowUpRight />
             </Link>
@@ -32,6 +38,16 @@ export function AboutUs() {
           <div className="about-us-right-text">
             Рішення, які обирають користувачі та які дають результат
           </div>
+          {width <= 800 && (
+            <Link
+              href={"/"}
+              className="about-us-learn-services"
+              data-cursor="hover"
+            >
+              <p>Переглянути послуги</p>
+              <GoArrowUpRight />
+            </Link>
+          )}
         </div>
         <div className="about-us-cards">
           <div className="about-us-card">
