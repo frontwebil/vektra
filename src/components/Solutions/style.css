@@ -337,7 +337,7 @@
 
 @media only screen and (max-width: 860px) {
   .solutions{
-    top: calc(-100% - 200px);
+    top: calc(-140vh - 300px);
   }
   .solutions-shape {
     top: 12%;
@@ -401,5 +401,9 @@
     max-width: 38%;
     top: 16%;
     aspect-ratio: 26 / 40;
+  }
+  .solutions-shape{
+    width: 160px;
+    top:6%;
   }
 }

@@ -19,6 +19,13 @@
 }
 .faq-left-text {
 }
+
+@media (max-width: 1120px) {
+  .faq {
+    border-radius: 30px;
+  }
+}
+
 .faq-left-text-title {
   font-family: var(--font-nyght-serif), serif;
   font-weight: 300;

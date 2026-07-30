@@ -185,6 +185,12 @@
   transform: scale(1.2);
 }
 
+@media (max-width: 1120px) {
+  .testimonials {
+    border-radius: 30px;
+  }
+}
+
 /* === Responsive === */
 @media (max-width: 1024px) {
   .testimonials-top {
@@ -197,6 +203,9 @@
   .testimonials-title {
     font-size: 48px;
     line-height: 46px;
+  }
+  .testimonials{
+    margin-top: -30px;
   }
 }
 
