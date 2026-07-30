@@ -9,32 +9,27 @@ import { useIsOpenForm } from "@/Zustand/isOpenForm";
 import { useScreenWidth } from "@/useFunc/useScreenWidth";
 
 export function Header() {
-  const [isOnAbout, setIsOnAbout] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { openContactForm } = useIsOpenForm();
   const width = useScreenWidth();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const aboutSection = document.getElementById("about-us");
-    if (!aboutSection) return;
-
     const updateHeader = () => {
-      const headerOffset = 84;
-      setIsOnAbout(aboutSection.getBoundingClientRect().top <= headerOffset);
+      setIsScrolled(window.scrollY >= 100);
     };
 
     updateHeader();
+
     window.addEventListener("scroll", updateHeader, { passive: true });
-    window.addEventListener("resize", updateHeader);
 
     return () => {
       window.removeEventListener("scroll", updateHeader);
-      window.removeEventListener("resize", updateHeader);
     };
   }, []);
 
   return (
-    <header className={isOnAbout ? "header--on-about" : undefined}>
+    <header className={isScrolled ? "header--on-about" : undefined}>
       <div className="container">
         <div className="header-logo" data-cursor="hover">
           <Image

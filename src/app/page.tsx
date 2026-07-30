@@ -26,12 +26,12 @@ export default async function Home() {
       {/* <AboutUs /> */}
       {/* <Services /> */}
       {/* <Solutions /> */}
-      {/* <Testimonials testimonials={testimonials} /> */}
-      {/* <Faq />
+      <Testimonials testimonials={testimonials} />
+      <Faq />
       <NextStep />
       <ContactFormSection />
       <SeoBlock />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }
