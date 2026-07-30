@@ -459,6 +459,12 @@
     bottom: 110px;
     left: 50px;
   }
+  .hero-bottom-1{
+    top: 15px;
+  }
+  .hero-bottom-2{
+    top: -27px;
+  }
 }
 
 @media (max-width: 400px) {
