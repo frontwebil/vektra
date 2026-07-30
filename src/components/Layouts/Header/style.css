@@ -109,6 +109,7 @@ header .container {
   padding: 0 20px;
   margin-right: -10px;
   transition: all 0.3s ease-in-out;
+  color: #0d0e20;
 }
 .header-button-icon {
   width: 0px;
@@ -371,11 +372,11 @@ header .container {
     width: 95px;
     height: 35px;
   }
-  .burger-bg{
+  .burger-bg {
     margin-bottom: 0;
   }
 
-  .header-logo-text{
+  .header-logo-text {
     font-size: 14px;
   }
 
