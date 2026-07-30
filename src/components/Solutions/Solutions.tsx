@@ -46,6 +46,7 @@ export function Solutions() {
         )}
 
         <Image
+                sizes="(max-width: 768px) 180px, 320px"
           src={"/Solutions/shape.webp"}
           width={1000}
           height={1000}
@@ -61,22 +62,25 @@ export function Solutions() {
             <div className="solution-imgs">
               <Image
                 src={"/Solutions/1/1.png"}
-                width={1000}
-                height={2000}
+                width={267}
+                height={438}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
               <Image
                 src={"/Solutions/1/2.png"}
-                width={1000}
-                height={2000}
+                width={269}
+                height={167}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
               <Image
                 src={"/Solutions/1/3.png"}
-                width={1000}
-                height={2000}
+                width={268}
+                height={438}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
@@ -97,22 +101,25 @@ export function Solutions() {
             <div className="solution-imgs">
               <Image
                 src={"/Solutions/1/1.png"}
-                width={1000}
-                height={2000}
+                width={267}
+                height={438}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
               <Image
                 src={"/Solutions/1/2.png"}
-                width={1000}
-                height={2000}
+                width={269}
+                height={167}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
               <Image
                 src={"/Solutions/1/3.png"}
-                width={1000}
-                height={2000}
+                width={268}
+                height={438}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
@@ -133,22 +140,25 @@ export function Solutions() {
             <div className="solution-imgs">
               <Image
                 src={"/Solutions/1/1.png"}
-                width={1000}
-                height={2000}
+                width={267}
+                height={438}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
               <Image
                 src={"/Solutions/1/2.png"}
-                width={1000}
-                height={2000}
+                width={269}
+                height={167}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
               <Image
                 src={"/Solutions/1/3.png"}
-                width={1000}
-                height={2000}
+                width={268}
+                height={438}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
@@ -169,22 +179,25 @@ export function Solutions() {
             <div className="solution-imgs">
               <Image
                 src={"/Solutions/1/1.png"}
-                width={1000}
-                height={2000}
+                width={267}
+                height={438}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
               <Image
                 src={"/Solutions/1/2.png"}
-                width={1000}
-                height={2000}
+                width={269}
+                height={167}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />
               <Image
                 src={"/Solutions/1/3.png"}
-                width={1000}
-                height={2000}
+                width={268}
+                height={438}
+                sizes="140px"
                 alt="Clave"
                 className="solution-img"
               />

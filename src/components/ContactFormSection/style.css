@@ -40,7 +40,7 @@
   line-height: 18px;
   letter-spacing: -5%;
 
-  color: #02002880;
+  color: #0200289e;
 }
 .contact-form-section-content {
   display: flex;
@@ -172,6 +172,7 @@
 }
 .contact-form-section-content-right-form-group input,
 .contact-form-section-content-right-form-group textarea {
+  color: rgba(2, 0, 40, 1);
   padding: 16px;
   max-width: 100%;
   width: 100%;
@@ -357,4 +358,9 @@
   .contact-form-section-content-right-form-row {
     gap: 20px;
   }
+}
+
+.contact-form-section-content-right-form-group input::placeholder,
+.contact-form-section-content-right-form-group textarea::placeholder {
+  color: rgba(2, 0, 40, 0.62);
 }

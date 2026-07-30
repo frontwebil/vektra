@@ -84,7 +84,7 @@
   font-size: 16px;
   line-height: 18px;
   letter-spacing: -5%;
-  color: #02002880;
+  color: #0200289e;
 
   max-width: 315px;
   width: 100%;
@@ -112,7 +112,7 @@
   aspect-ratio: 1 / 1;
   width: 100%;
   border-radius: 20px;
-  background-image: url("/Solutions/bg.png");
+  background-image: url("/Solutions/bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -201,7 +201,7 @@
 
   border-radius: 22px;
 
-  background-image: url("/Solutions/Folder.png");
+  background-image: url("/Solutions/Folder.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -297,7 +297,7 @@
     gap: 50px;
   }
   .solution-description {
-    background-image: url("/Solutions/Folder-bigger.png");
+    background-image: url("/Solutions/Folder-bigger.webp");
     aspect-ratio: 304 / 160;
     padding: 16px;
   }

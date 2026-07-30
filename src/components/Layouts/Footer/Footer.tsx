@@ -89,6 +89,8 @@ export function Footer() {
               <Link
                 href="https://t.me/iLyhaha1"
                 target="_blank"
+                aria-label="Telegram Vektra"
+                title="Telegram Vektra"
                 rel="noopener noreferrer"
                 className="footer-top-social-group-link"
                 data-cursor="hover"
@@ -99,6 +101,8 @@ export function Footer() {
               <Link
                 href="https://www.instagram.com/vektra_agency/"
                 target="_blank"
+                aria-label="Instagram Vektra"
+                title="Instagram Vektra"
                 rel="noopener noreferrer"
                 className="footer-top-social-group-link"
                 data-cursor="hover"
@@ -109,6 +113,8 @@ export function Footer() {
               <Link
                 href="https://www.threads.com/@vektra_agency"
                 target="_blank"
+                aria-label="Threads Vektra"
+                title="Threads Vektra"
                 rel="noopener noreferrer"
                 className="footer-top-social-group-link"
                 data-cursor="hover"
@@ -136,7 +142,7 @@ export function Footer() {
           </div>
           {width >= 724 && (
             <div className="footer-bottom-right">
-              <p>© 2026 Vectra Agency. All rights reserved.</p>
+              <p>© 2026 Vektra Agency. All rights reserved.</p>
             </div>
           )}
         </div>
@@ -144,7 +150,7 @@ export function Footer() {
       {width <= 724 && (
         <div className="container">
           <p className="footer-all-rights">
-            © 2026 Vectra Agency. All rights reserved.
+            © 2026 Vektra Agency. All rights reserved.
           </p>
         </div>
       )}

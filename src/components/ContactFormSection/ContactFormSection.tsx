@@ -91,6 +91,7 @@ export function ContactFormSection() {
           <div className="contact-form-section-content-left">
             <div className="contact-form-section-content-left-img">
               <Image
+                sizes="(max-width: 768px) 180px, 320px"
                 src={"/shape/shape-4.webp"}
                 alt="shape-1"
                 width={400}
@@ -131,6 +132,8 @@ export function ContactFormSection() {
                   <Link
                     href="https://t.me/iLyhaha1"
                     target="_blank"
+                    aria-label="Telegram Vektra"
+                    title="Telegram Vektra"
                     rel="noopener noreferrer"
                     className="contact-form-section-content-row-social-link"
                     data-cursor="hover"
@@ -141,6 +144,8 @@ export function ContactFormSection() {
                   <Link
                     href="https://www.instagram.com/vektra_agency/"
                     target="_blank"
+                    aria-label="Instagram Vektra"
+                    title="Instagram Vektra"
                     rel="noopener noreferrer"
                     className="contact-form-section-content-row-social-link"
                     data-cursor="hover"
@@ -151,6 +156,8 @@ export function ContactFormSection() {
                   <Link
                     href="https://www.threads.com/@vektra_agency"
                     target="_blank"
+                    aria-label="Threads Vektra"
+                    title="Threads Vektra"
                     rel="noopener noreferrer"
                     className="contact-form-section-content-row-social-link"
                     data-cursor="hover"

@@ -62,10 +62,12 @@ export function AboutUs() {
                 Ніша
               </div>
               <Image
+                sizes="(max-width: 768px) 180px, 320px"
                 src={"/shape/shape-1.webp"}
                 width={300}
                 height={300}
-                alt="shape"
+                alt=""
+                aria-hidden="true"
               />
             </div>
             <h3 className="about-us-card-title">30+ успішних проєктів</h3>
@@ -80,6 +82,7 @@ export function AboutUs() {
               </div>
               <div className="about-us-card-img-text-block about-us-card-text-center-2">
                 <Image
+                sizes="(max-width: 768px) 180px, 320px"
                   src={"/shape/code.svg"}
                   width={50}
                   height={50}
@@ -90,10 +93,12 @@ export function AboutUs() {
                 Зростання
               </div>
               <Image
+                sizes="(max-width: 768px) 180px, 320px"
                 src={"/shape/shape-2.webp"}
                 width={300}
                 height={300}
-                alt="shape"
+                alt=""
+                aria-hidden="true"
               />
             </div>
             <h3 className="about-us-card-title center">5 років</h3>
@@ -111,10 +116,12 @@ export function AboutUs() {
                 Комунікація
               </div>
               <Image
+                sizes="(max-width: 768px) 180px, 320px"
                 src={"/shape/shape-3.webp"}
                 width={300}
                 height={300}
-                alt="shape"
+                alt=""
+                aria-hidden="true"
               />
             </div>
             <h3 className="about-us-card-title">90% клієнтів повертаються</h3>

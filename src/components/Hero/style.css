@@ -13,6 +13,9 @@
   pointer-events: none;
 
   background-color: #0a0b19;
+  background-image: url("/Hero/bg-poster.webp");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-bg-video {
@@ -51,7 +54,8 @@
   font-style: italic;
 }
 
-.hero-main-content h2 {
+.hero-main-content h2,
+.hero-main-content-subtitle {
   font-weight: 400;
   font-size: 20px;
   line-height: 100%;
@@ -67,6 +71,7 @@
 }
 
 .hero-main-content-button-learn-services {
+  color: rgba(2, 0, 40, 1);
   font-weight: 600;
   font-size: 18px;
   line-height: 100%;
@@ -314,14 +319,14 @@
 
 .hero-main-content-span-1 {
   display: inline-block;
-  background-image: url("/Hero/span-1.png");
+  background-image: url("/Hero/span-1.webp");
   width: 100px;
   height: 52px;
 }
 
 .hero-main-content-span-2 {
   display: inline-block;
-  background-image: url("/Hero/span-2.png");
+  background-image: url("/Hero/span-2.webp");
   width: 100px;
   height: 52px;
 }
@@ -346,10 +351,12 @@
     background-size: cover;
   }
 
-  .hero-main-content h2 {
+  .hero-main-content h2,
+.hero-main-content-subtitle {
     font-size: 18px;
   }
-  .hero-main-content h2 {
+  .hero-main-content h2,
+.hero-main-content-subtitle {
     margin-top: 18px;
   }
   .hero-main-content-button {
@@ -407,7 +414,8 @@
   .hero-main-content {
     padding: 0 20px 0;
   }
-  .hero-main-content h2 {
+  .hero-main-content h2,
+.hero-main-content-subtitle {
     font-size: 16px;
     margin-top: 16px;
     text-align: center;

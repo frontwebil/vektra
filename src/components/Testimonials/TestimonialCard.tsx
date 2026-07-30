@@ -30,7 +30,7 @@ export function TestimonialCard({
       <div className="testimonials-card-top">
         <div className="testimonials-card-img">
           <Image
-            src={testimonial.avatarUrl || "/Testimonials/placeholder.png"}
+            src={testimonial.avatarUrl || "/Testimonials/placeholder.svg"}
             alt="avatar"
             width={120}
             height={120}

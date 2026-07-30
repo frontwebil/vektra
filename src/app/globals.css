@@ -42,3 +42,14 @@ body {
 
   user-select: none;
 }
+
+/* Below-the-fold sections are rendered (and their background images fetched)
+   only when the user approaches them. */
+.testimonials,
+.next-step,
+.contact-form-section,
+.seo-block,
+footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}

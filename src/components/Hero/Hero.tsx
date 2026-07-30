@@ -4,25 +4,14 @@ import "./style.css";
 import "./layout.css";
 import { GoArrowUpRight } from "react-icons/go";
 import { useIsOpenForm } from "@/Zustand/isOpenForm";
+import { HeroBackground } from "./HeroBackground";
 
 export function Hero() {
   const { openContactForm } = useIsOpenForm();
 
   return (
     <section className="hero">
-      <div className="hero-bg" aria-hidden>
-        <video
-          className="hero-bg-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-        >
-          <source src="/Hero/bg.webm" type="video/webm" />
-        </video>
-        <div className="hero-bg-overlay" />
-      </div>
+      <HeroBackground />
       <div className="hero-layout">
         <div className="hero-layout-first-column">
           <div className="first"></div>
@@ -33,7 +22,8 @@ export function Hero() {
               className="star-1"
               width={50}
               height={50}
-              alt="."
+              alt=""
+              aria-hidden="true"
             />
           </div>
           <div></div>
@@ -52,7 +42,8 @@ export function Hero() {
               className="star-2"
               width={50}
               height={50}
-              alt="."
+              alt=""
+              aria-hidden="true"
             />
           </div>
         </div>
@@ -80,7 +71,8 @@ export function Hero() {
               className="star-3"
               width={50}
               height={50}
-              alt="."
+              alt=""
+              aria-hidden="true"
             />
           </div>
           <div></div>
@@ -98,7 +90,8 @@ export function Hero() {
               className="star-4"
               width={50}
               height={50}
-              alt="."
+              alt=""
+              aria-hidden="true"
             />
           </div>
           <div></div>
@@ -110,6 +103,7 @@ export function Hero() {
           <div className="hero-absolute-text-card hero-top-1">Дизайн</div>
           <div className="hero-absolute-text-card hero-top-2">Розробка</div>
           <Image
+                sizes="(max-width: 768px) 180px, 320px"
             src={"/Hero/shape.webp"}
             width={180}
             height={180}
@@ -125,7 +119,9 @@ export function Hero() {
             які{" "}
             <span className="hero-main-content-italic">задають напрямок</span>
           </h1>
-          <h2>Дизайн, розробка та стратегія як єдина система росту бізнесу</h2>
+          <p className="hero-main-content-subtitle">
+            Дизайн, розробка та стратегія як єдина система росту бізнесу
+          </p>
           <button
             className="hero-main-content-button"
             onClick={() => openContactForm()}
@@ -147,6 +143,7 @@ export function Hero() {
             Масштабування
           </div>
           <Image
+                sizes="(max-width: 768px) 180px, 320px"
             src={"/Hero/shape-2.webp"}
             aria-hidden="true"
             width={180}

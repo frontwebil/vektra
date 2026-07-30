@@ -40,10 +40,12 @@ export function Faq() {
               <div className="faq-left-caraculi">
                 <div className="faq-left-caraculi-top">
                   <Image
+                sizes="(max-width: 768px) 180px, 320px"
                     src={"/shape/shape-3.webp"}
                     width={170}
                     height={170}
-                    alt="shape"
+                    alt=""
+                aria-hidden="true"
                   />
                   <p className="faq-left-caraculi-planka top-planka">
                     Без зайвих ризиків
@@ -51,10 +53,12 @@ export function Faq() {
                 </div>
                 <div className="faq-left-caraculi-bottom">
                   <Image
+                sizes="(max-width: 768px) 180px, 320px"
                     src={"/shape/shape-2.webp"}
                     width={315}
                     height={240}
-                    alt="shape"
+                    alt=""
+                aria-hidden="true"
                   />
                   <p className="faq-left-caraculi-planka bottom-top-left-planka">
                     Чіткий вектор
@@ -74,10 +78,12 @@ export function Faq() {
           <div className="faq-left-caraculi">
             <div className="faq-left-caraculi-top">
               <Image
+                sizes="(max-width: 768px) 180px, 320px"
                 src={"/shape/shape-3.webp"}
                 width={170}
                 height={170}
-                alt="shape"
+                alt=""
+                aria-hidden="true"
               />
               <p className="faq-left-caraculi-planka top-planka">
                 Без зайвих ризиків
@@ -85,10 +91,12 @@ export function Faq() {
             </div>
             <div className="faq-left-caraculi-bottom">
               <Image
+                sizes="(max-width: 768px) 180px, 320px"
                 src={"/shape/shape-2.webp"}
                 width={315}
                 height={240}
-                alt="shape"
+                alt=""
+                aria-hidden="true"
               />
               <p className="faq-left-caraculi-planka bottom-top-left-planka">
                 Чіткий вектор
