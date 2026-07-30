@@ -80,7 +80,10 @@
 }
 
 @media (max-width: 560px) {
-  .star-1, .star-2, .star-3, .star-4{
+  .star-1,
+  .star-2,
+  .star-3,
+  .star-4 {
     animation: none;
     filter: none;
   }
@@ -112,7 +115,7 @@
     height: 12px;
 
     top: calc(-7px + 270%);
-    right: calc(-6px - 1253%);
+    right: -6px;
   }
 
   .star-4 {
