@@ -80,6 +80,10 @@
 }
 
 @media (max-width: 560px) {
+  .star-1, .star-2, .star-3, .star-4{
+    animation: none;
+    filter: none;
+  }
   .hero-main-content-span-1,
   .hero-main-content-span-2 {
     background-position: center;
