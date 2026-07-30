@@ -199,3 +199,215 @@
 .service-row-left.hovered .fourth-naming-tag {
   transform: translateY(0) rotate(-5deg);
 }
+
+@media (max-width: 1325px) {
+  .service-naming {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .first-naming-tag {
+    top: -30px;
+  }
+  .service-row-right-text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .service-letter {
+    width: 40px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .services {
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .service-naming {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .service-naming-tag {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media (max-width: 890px) {
+  .service-row-right-icon {
+    display: none;
+  }
+
+  /* Теги — завжди видимі */
+  .service-naming-tag {
+    opacity: 1;
+    visibility: visible;
+    transition: none !important;
+  }
+
+  .first-naming-tag {
+    transform: rotate(-5deg) !important;
+  }
+  .second-naming-tag {
+    transform: rotate(5deg) !important;
+  }
+  .third-naming-tag {
+    transform: rotate(5deg) !important;
+  }
+  .fourth-naming-tag {
+    transform: rotate(-5deg) !important;
+  }
+
+  /* Текст — завжди видимий */
+  .service-row-right-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%);
+    transition: none !important;
+  }
+
+  /* Колір лівої частини — завжди білий */
+  .service-row-left {
+    color: rgba(255, 255, 255, 1);
+    transition: none !important;
+  }
+
+  .service-row-left {
+    flex-direction: column;
+    align-items: start;
+    gap: 60px;
+    flex-shrink: 0;
+  }
+  .service-row-right-text {
+    position: relative;
+    transform: none;
+    text-align: right;
+    padding-bottom: 10px;
+  }
+
+  .service-row {
+    align-items: flex-end;
+    gap: 40px;
+  }
+
+  .services {
+    padding: 75px 0 75px;
+  }
+
+  .services-title {
+    margin-bottom: 10px;
+  }
+  .service-row-right-text.hovered {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .fourth-naming-tag {
+    top: -25px;
+  }
+}
+
+@media (max-width: 760px) {
+  .service-row {
+    flex-direction: column;
+    align-items: start;
+    padding: 24px 0;
+  }
+  .service-row-right-text {
+    text-align: left;
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+  .service-row-right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .service-naming {
+    font-size: 32px;
+    line-height: 50px;
+    max-width: 100%;
+    width: 100%;
+  }
+  .first-naming-tag {
+    left: 0;
+  }
+  .second-naming-tag {
+    left: auto;
+    right: 0;
+  }
+  .second-naming-tag {
+    max-width: 100%;
+  }
+  .service-row-left {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .service-naming-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .service-row:nth-child(1) .service-naming-container .second-naming-tag {
+    left: 75px;
+  }
+
+  .service-row:nth-child(2) .service-naming-container .fourth-naming-tag {
+    left: 100px;
+  }
+
+  .service-row:nth-child(2) .service-naming-container .first-naming-tag {
+    left: auto;
+    right: 0;
+  }
+
+  .service-row:nth-child(2) .service-naming-container .second-naming-tag {
+    right: 70px;
+    bottom: -30px;
+  }
+  .service-row:nth-child(4) .service-naming-container .second-naming-tag {
+    bottom: auto;
+    top: -30px;
+  }
+  .service-row:nth-child(4) .service-naming-container .fourth-naming-tag {
+    top: auto;
+    bottom: -35px;
+  }
+  .service-row:nth-child(3) .service-naming-container .second-naming-tag {
+    top: auto;
+    left: 100px;
+    bottom: -25px;
+    transform: rotate(0deg) !important;
+  }
+  .service-row:nth-child(5) .service-naming-container .second-naming-tag {
+    top: auto;
+    left: 100px;
+    bottom: -25px;
+    transform: rotate(0deg) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .service-row:nth-child(1) .service-naming-container .service-naming {
+    font-size: 29px;
+  }
+  .service-row:nth-child(3) .service-naming-container .service-naming {
+    font-size: 25px;
+  }
+  .service-row:nth-child(3) .service-naming-container .second-naming-tag {
+    left: auto;
+    right: 0;
+  }
+  .service-row:nth-child(3) .service-naming-container .first-naming-tag {
+    left: 0;
+    top: auto;
+    bottom: -20px;
+    transform: rotate(5deg) !important;
+  }
+  .service-row:nth-child(6) .service-naming-container .service-naming {
+    font-size: 26px;
+  }
+}

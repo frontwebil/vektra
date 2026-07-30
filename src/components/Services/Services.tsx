@@ -35,7 +35,7 @@ const services = [
     letter: "D",
     title: "Full-stack розробка",
     text: "Розробка сайтів і вебпродуктів будь-якої складності — від адаптивного front-end до серверної логіки та інтеграцій",
-    tags: ["Front-end", "Back-end", "CMS інтеграції", "Розробка API"],
+    tags: ["Frontend", "Backend", "API інтеграції", "Розробка API"],
     link: "/",
   },
   {

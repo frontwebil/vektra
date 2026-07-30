@@ -4,7 +4,7 @@
   padding-top: 100px;
   padding-bottom: 185px;
   position: sticky;
-  top: -60px;
+  top: -30%;
   z-index: 3;
 }
 .about-us-top {
@@ -245,6 +245,7 @@
   }
   .about-us {
     padding-top: 70px;
+    border-radius: 30px 30px 0 0;
   }
 
   .about-us-card-title {
@@ -254,6 +255,11 @@
 
   .about-us-card-title.center {
     font-size: 46px;
+  }
+
+  .about-us {
+    top: -100%;
+    padding-bottom: 140px;
   }
 }
 
@@ -347,7 +353,7 @@
   }
   .about-us-card-title.center {
     margin-top: 16px;
-        font-size: 30px;
+    font-size: 30px;
     line-height: 28px;
   }
 }

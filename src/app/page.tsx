@@ -24,14 +24,14 @@ export default async function Home() {
       <Header />
       <Hero />
       <AboutUs />
-      {/* <Services /> */}
-      {/* <Solutions />
+      <Services />
+      <Solutions />
       <Testimonials testimonials={testimonials} />
       <Faq />
       <NextStep />
       <ContactFormSection />
       <SeoBlock />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

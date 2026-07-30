@@ -335,12 +335,10 @@
   }
 }
 
-@media only screen and (max-width: 920px) {
-  .solutions {
-    padding: 60px 0 120px;
-  }
-}
 @media only screen and (max-width: 860px) {
+  .solutions{
+    top: calc(-100% - 200px);
+  }
   .solutions-shape {
     top: 12%;
   }
