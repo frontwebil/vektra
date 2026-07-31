@@ -9,15 +9,10 @@ const ContactForm = dynamic(
   { ssr: false },
 );
 
-/**
- * The contact modal is only needed once the user asks for it, so its JS and CSS
- * are fetched on the first open instead of on every page load.
- */
 export function ContactFormLazy() {
   const { isOpenContactForm } = useIsOpenForm();
   const [wasOpened, setWasOpened] = useState(false);
 
-  // Render-phase update: remember the first open so the modal stays mounted.
   if (isOpenContactForm && !wasOpened) {
     setWasOpened(true);
   }

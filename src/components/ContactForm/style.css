@@ -53,6 +53,7 @@
   top: 36px;
   right: 36px;
   padding-left: 10px;
+  color: #0D0E20;
 }
 
 .ContactForm-close svg {
@@ -67,6 +68,7 @@
   font-size: 52px;
   line-height: 48px;
   letter-spacing: -2%;
+  color: #0D0E20;
 }
 .ContactForm-description {
   font-weight: 400;
